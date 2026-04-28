@@ -170,8 +170,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-7xl border border-white/20 bg-white/60 backdrop-blur-2xl rounded-3xl shadow-[0_20px_40px_-20px_rgba(0,0,0,0.1)] transition-all duration-300">
+      <div className="px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-kumho-red flex items-center justify-center rounded-sm transform -skew-x-12">
             <span className="text-white font-black text-xl italic font-display">K</span>
@@ -229,34 +229,34 @@ const ContinuousTireTrack = () => {
 };
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center pt-20 overflow-hidden px-6 lg:px-20 bg-zinc-100">
-    <div className="absolute inset-0 industrial-grid opacity-50" />
-    <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-      <div className="space-y-8">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="inline-block bg-red-100 text-kumho-red px-4 py-1.5 rounded-md text-[10px] font-black uppercase tracking-[0.2em] italic"
-        >
-          Distribuidor Oficial Autorizado
-        </motion.div>
-        
-        <div className="space-y-4">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-black uppercase leading-[1.1] text-slate-800 italic px-2 pb-2"
+  <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden industrial-grid bg-white">
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white via-transparent to-zinc-50 pointer-events-none" />
+    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10 w-full">
+      <div className="space-y-12">
+        <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="inline-flex items-center gap-3 px-5 py-2 bg-kumho-red ring-1 ring-white/20 rounded-full shadow-[0_10px_20px_-5px_rgba(230,0,18,0.3)]"
           >
-            Rendimiento <br /> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-400">Sin Límites</span>
+            <div className="w-2 h-2 bg-white rounded-full animate-pulse shadow-[0_0_8px_white]" />
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">Distribuidor Directo Argentina</span>
+        </motion.div>
+
+        <div className="space-y-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-6xl md:text-[6rem] lg:text-[7rem] xl:text-[8rem] font-black uppercase leading-[1.1] text-slate-900 italic font-display tracking-tighter"
+          >
+            Control <span className="inline-block px-2 pt-4 pb-2 text-transparent bg-clip-text bg-gradient-to-br from-kumho-red via-red-900 to-slate-900 drop-shadow-2xl">Total</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="max-w-md text-lg text-slate-600 font-medium leading-relaxed"
+            className="max-w-lg text-xl text-slate-500 font-medium leading-relaxed"
           >
-            Tecnología coreana diseñada para los caminos de Argentina. Agarre superior, mayor durabilidad y seguridad en cada curva.
+            Más que un neumático, es ingeniería de precisión coreana adaptada a cada kilómetro de las rutas argentinas. Elevá tu experiencia de manejo hoy.
           </motion.p>
         </div>
         
@@ -264,13 +264,19 @@ const Hero = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex flex-wrap gap-5 pt-4"
+          className="flex flex-wrap gap-6"
         >
-          <button className="bg-kumho-red text-white h-16 px-10 rounded-2xl font-black uppercase tracking-widest text-sm red-glow hover:scale-105 active:scale-95 transition-all">
-            Cotizar Mis Neumáticos
+          <button className="group relative bg-slate-900 text-white h-20 px-12 rounded-[1.5rem] font-black uppercase tracking-widest text-sm overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_20px_40px_-10px_rgba(30,41,59,0.3)]">
+            <div className="absolute inset-0 bg-gradient-to-r from-kumho-red to-red-600 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
+            <span className="relative z-10 flex items-center gap-3">
+              Cotizar Medida <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            </span>
           </button>
-          <button onClick={() => {document.getElementById('selector')?.scrollIntoView({behavior: 'smooth'})}} className="border-2 border-zinc-200 bg-white text-slate-800 h-16 px-10 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-zinc-50 transition-all sleek-shadow active:scale-95">
-            Ver Sucursales
+          <button 
+            onClick={() => document.getElementById('selector')?.scrollIntoView({behavior: 'smooth'})} 
+            className="group bg-white/50 backdrop-blur-md border border-zinc-200 text-slate-800 h-20 px-10 rounded-[1.5rem] font-black uppercase tracking-widest text-sm hover:border-slate-900 transition-all active:scale-95 flex items-center gap-3"
+          >
+            Ubicación de Sucursales
           </button>
         </motion.div>
 
@@ -278,47 +284,46 @@ const Hero = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="pt-10 flex gap-10 items-center border-t border-zinc-200"
+          className="pt-12 flex items-center gap-10 border-t border-zinc-200/50"
         >
-          <div className="text-center group">
-            <p className="text-2xl font-black text-slate-900 italic transform group-hover:scale-110 transition-transform">6</p>
-            <p className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Cuotas Sin Interés</p>
+          <div className="space-y-1 group cursor-default">
+            <p className="text-4xl font-black text-slate-900 italic font-display group-hover:text-kumho-red transition-colors">6</p>
+            <p className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Cuotas Sin Interés</p>
           </div>
-          <div className="h-10 w-[1px] bg-zinc-200" />
-          <div className="text-center group text-kumho-red">
-            <p className="text-2xl font-black italic transform group-hover:scale-110 transition-transform">24h</p>
-            <p className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Despacho Federal</p>
+          <div className="h-10 w-[1px] bg-zinc-200/50" />
+          <div className="space-y-1 group cursor-default">
+            <p className="text-4xl font-black text-kumho-red italic font-display">24h</p>
+            <p className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Despacho Nacional</p>
           </div>
-          <div className="h-10 w-[1px] bg-zinc-200" />
-          <div className="text-center group">
-            <p className="text-2xl font-black text-slate-900 italic transform group-hover:scale-110 transition-transform">5 Años</p>
-            <p className="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Garantía de Fábrica</p>
+          <div className="h-10 w-[1px] bg-zinc-200/50" />
+          <div className="space-y-1 group cursor-default">
+            <p className="text-4xl font-black text-slate-900 italic font-display">100%</p>
+            <p className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Garantía Oficial</p>
           </div>
         </motion.div>
       </div>
 
       <motion.div 
-        initial={{ opacity: 0, rotate: 5, scale: 0.9 }}
-        animate={{ opacity: 1, rotate: 2, scale: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative flex justify-center lg:justify-end"
+        initial={{ opacity: 0, x: 40, rotate: 10, scale: 0.8 }}
+        animate={{ opacity: 1, x: 0, rotate: -2, scale: 1 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="relative perspective-[2000px]"
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[120%] h-[120%] bg-gradient-to-br from-red-500/10 to-transparent rounded-full blur-3xl opacity-60" />
-        <div className="bg-white p-10 rounded-[2.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-white relative w-full max-w-sm rotate-2 hover:rotate-0 transition-transform duration-700">
-          <div className="absolute -top-16 -right-12 w-56 h-56 group overflow-visible">
-              <ImageWithFallback src="https://images.unsplash.com/photo-1549434764-da209774659f?q=80&w=1000&auto=format&fit=crop" alt="Ecsta PS71 Showcase" className="w-full h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]" />
-          </div>
-          <div className="mt-16 space-y-5">
-            <div className="inline-block bg-zinc-100 text-slate-500 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest">Serie PS71</div>
-            <h2 className="text-4xl font-black italic uppercase leading-none text-slate-900">Ecsta High Tech</h2>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">Neumático de ultra alto rendimiento diseñado para proporcionar un manejo ágil y una frenada superior.</p>
-            <div className="pt-6 flex items-end justify-between">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[140%] h-[140%] bg-[radial-gradient(circle_at_center,_var(--color-kumho-red)_0%,_transparent_70%)] opacity-10 blur-[100px]" />
+        <div className="bg-white p-12 rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] border border-slate-100 relative w-full max-w-sm group hover:scale-[1.02] transition-transform duration-500">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-[0.2em] italic shadow-lg">
+              <Fan size={10} className="animate-spin-slow" /> Serie Deportiva
+            </div>
+            <h2 className="text-5xl font-black italic uppercase leading-none text-slate-900 tracking-tighter">Ecsta PS71</h2>
+            <p className="text-sm text-slate-500 leading-relaxed font-semibold">Máxima performance para vehículos de alta gama. Respuesta instantánea y seguridad extrema.</p>
+            <div className="pt-8 flex items-end justify-between border-t border-zinc-100">
               <div>
-                <span className="block text-[10px] text-zinc-400 font-black uppercase tracking-tighter">Iniciando desde</span>
-                <span className="text-3xl font-black text-slate-900">$185.400</span>
+                <span className="block text-[10px] text-zinc-400 font-black uppercase tracking-[0.2em] mb-1">Precio Online</span>
+                <span className="text-4xl font-black text-slate-900 font-mono">$185.400</span>
               </div>
-              <Link to="/product/ps71" className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white hover:bg-kumho-red transition-colors sleek-shadow">
-                <ArrowRight size={20} />
+              <Link to="/product/ps71" className="w-16 h-16 bg-kumho-red group-hover:bg-slate-900 rounded-[1.2rem] flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 shadow-[0_15px_30px_-10px_rgba(230,0,18,0.5)]">
+                <ArrowRight size={24} />
               </Link>
             </div>
           </div>
@@ -328,38 +333,60 @@ const Hero = () => (
   </section>
 );
 
-const FeatureCard: React.FC<{ icon: any, title: string, desc: string }> = ({ icon: Icon, title, desc }) => (
-  <div className="p-10 border border-zinc-200 bg-white hover:border-kumho-red transition-all group sleek-shadow">
-    <div className="w-14 h-14 bg-zinc-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-kumho-red group-hover:text-white transition-colors">
-      <Icon size={28} />
+const FeatureCard: React.FC<{ icon: any, title: string, desc: string, delay?: number }> = ({ icon: Icon, title, desc, delay = 0 }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ delay }}
+    className="p-12 border border-zinc-100 bg-white hover:border-kumho-red transition-all group sleek-shadow rounded-[3rem] relative overflow-hidden"
+  >
+    <div className="absolute top-0 right-0 w-24 h-24 bg-zinc-50 rounded-bl-full -translate-y-2 translate-x-2 group-hover:bg-kumho-red/5 transition-colors" />
+    <div className="w-16 h-16 bg-zinc-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-kumho-red group-hover:text-white transition-all transform group-hover:scale-110 shadow-sm relative z-10">
+      <Icon size={32} />
     </div>
-    <h3 className="text-xl font-black uppercase italic mb-4 text-slate-800">{title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed font-medium">{desc}</p>
-  </div>
+    <h3 className="text-2xl font-black uppercase italic mb-4 text-slate-800 tracking-tighter relative z-10">{title}</h3>
+    <p className="text-slate-500 text-base leading-relaxed font-semibold relative z-10">{desc}</p>
+  </motion.div>
 );
 
 const FeaturesSection = () => (
-  <section id="features" className="py-24 bg-white">
-    <div className="max-w-7xl mx-auto px-6 text-center mb-16">
-       <span className="text-kumho-red font-black uppercase text-xs tracking-[0.3em] italic">Tecnología</span>
-       <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-slate-900 mt-4">Ingeniería de Vértice</h2>
+  <section id="features" className="py-32 bg-white relative overflow-hidden">
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_center,_var(--color-kumho-red)_0%,_transparent_70%)] opacity-[0.03] -z-10" />
+    <div className="max-w-7xl mx-auto px-6 text-center mb-24">
+       <motion.span 
+         initial={{ opacity: 0 }}
+         whileInView={{ opacity: 1 }}
+         className="text-kumho-red font-black uppercase text-xs tracking-[0.4em] italic block mb-4"
+       >
+         Ingeniería Coreana
+       </motion.span>
+       <motion.h2 
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter text-slate-900 font-display"
+       >
+         ADN de <span className="text-transparent bg-clip-text bg-gradient-to-r from-kumho-red to-red-800">Competición</span>
+       </motion.h2>
     </div>
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <FeatureCard 
           icon={ShieldCheck}
-          title="Máxima Seguridad"
-          desc="Distancia de frenado optimizada en mojado gracias a sus surcos anchos que previenen el aquaplaning."
+          title="Seguridad"
+          desc="Diseño asimétrico que garantiza una tracción lateral superior y distancias de frenado ultra-cortas."
+          delay={0}
         />
         <FeatureCard 
           icon={Fan}
-          title="Disipación Térmica"
-          desc="Estructura diseñada para disipar el calor a altas velocidades, prolongando la vida útil del caucho."
+          title="Resistencia"
+          desc="Compuestos de sílice de última generación que mantienen la flexibilidad y el agarre bajo presión extrema."
+          delay={0.1}
         />
         <FeatureCard 
           icon={Gauge}
-          title="Performance Urbana"
-          desc="Bajo nivel de ruido y máxima estabilidad lateral para una conducción suave en las calles argentinas."
+          title="Control"
+          desc="Respuesta de dirección milimétrica para conductores que exigen el máximo de su vehículo en cada curva."
+          delay={0.2}
         />
       </div>
     </div>
@@ -367,24 +394,33 @@ const FeaturesSection = () => (
 );
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
-  <Link to={`/product/${product.id}`} className="block space-y-6 group p-6 bg-white rounded-[2rem] border border-zinc-100 sleek-shadow hover:-translate-y-2 transition-all">
-    <div className="aspect-square bg-zinc-50/50 rounded-3xl overflow-hidden relative flex items-center justify-center">
+  <Link to={`/product/${product.id}`} className="block space-y-6 group p-6 bg-white rounded-[2.5rem] border border-zinc-100 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_60px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-32 h-32 bg-kumho-red opacity-[0.02] rounded-bl-full translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-700" />
+    
+    <div className="aspect-square bg-zinc-50 rounded-3xl overflow-hidden relative flex items-center justify-center p-4">
       <ImageWithFallback 
         whileHover={{ rotate: 360 }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         src={product.image} 
         alt={product.name} 
-        className="w-4/5 h-4/5 object-contain" 
+        className="w-4/5 h-4/5 object-contain z-10 filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.1)] group-hover:drop-shadow-[0_30px_40px_rgba(230,0,18,0.2)] transition-all" 
       />
-      <div className="absolute top-4 right-4 bg-slate-900 text-white text-[9px] font-black uppercase px-3 py-1.5 rounded-full italic tracking-widest">Premium</div>
+      <div className="absolute top-4 right-4 bg-slate-900 text-white text-[8px] font-black uppercase px-4 py-1.5 rounded-full italic tracking-widest z-20 shadow-xl">Premium</div>
     </div>
-    <div className="space-y-2 px-2">
-      <span className="text-zinc-400 text-[10px] uppercase font-black tracking-widest">{product.type}</span>
-      <h3 className="text-2xl font-black uppercase italic text-slate-800">{product.name}</h3>
-      <div className="flex items-center justify-between pt-2">
-        <p className="text-kumho-red font-black text-2xl font-mono">{product.price}</p>
-        <div className="p-3 bg-zinc-100 text-slate-900 rounded-full group-hover:bg-slate-900 group-hover:text-white transition-all">
-          <ArrowRight size={18} />
+    
+    <div className="space-y-3 px-2">
+      <div className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-kumho-red rounded-full" />
+        <span className="text-zinc-400 text-[10px] uppercase font-black tracking-[0.2em]">{product.type}</span>
+      </div>
+      <h3 className="text-2xl font-black uppercase italic text-slate-800 tracking-tighter group-hover:text-kumho-red transition-colors">{product.name}</h3>
+      <div className="flex items-center justify-between pt-4 border-t border-zinc-50 group-hover:border-zinc-100 transition-colors">
+        <div className="space-y-0.5">
+          <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest">Desde</p>
+          <p className="text-slate-900 font-black text-2xl font-mono tracking-tighter group-hover:text-kumho-red transition-colors">{product.price}</p>
+        </div>
+        <div className="scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 p-4 bg-slate-900 text-white rounded-2xl transition-all duration-300 shadow-xl shadow-slate-900/20">
+          <ArrowRight size={20} />
         </div>
       </div>
     </div>
@@ -392,18 +428,29 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
 );
 
 const CatalogSection = () => (
-  <section id="catalog" className="py-24 bg-zinc-50 industrial-grid">
+  <section id="catalog" className="py-32 bg-zinc-50 industrial-grid relative">
+    <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent pointer-events-none" />
     <div className="max-w-7xl mx-auto px-6">
-      <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 px-2">
-        <div className="space-y-4">
-           <span className="text-kumho-red font-black uppercase text-xs tracking-[0.3em] italic">Lo más elegido</span>
-           <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-slate-900">Catálogo 2026</h2>
+      <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+        <div className="space-y-5">
+           <motion.div 
+             initial={{ opacity: 0, x: -10 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             className="flex items-center gap-3"
+           >
+             <div className="w-8 h-1 bg-kumho-red" />
+             <span className="text-kumho-red font-black uppercase text-xs tracking-[0.4em] italic">Gama Premium</span>
+           </motion.div>
+           <h2 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter text-slate-900 font-display">Catálogo <span className="inline-block px-6 pt-4 pb-4 text-transparent bg-clip-text bg-gradient-to-br from-slate-900 to-slate-400">2026</span></h2>
         </div>
-        <div className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-slate-500 hover:text-kumho-red transition-colors group cursor-pointer font-bold">
-          Explorar toda la línea <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-        </div>
+        <motion.button 
+          whileHover={{ x: 5 }}
+          className="flex items-center gap-4 bg-white/80 backdrop-blur-md border border-zinc-200 px-10 h-16 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 shadow-xl hover:bg-slate-900 hover:text-white transition-all group"
+        >
+          Explorar Toda la Línea <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        </motion.button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {PRODUCTS.map(p => <ProductCard key={p.id} product={p} />)}
       </div>
     </div>
@@ -430,23 +477,24 @@ const TireSelector = () => {
   };
 
   return (
-    <section id="selector" className="py-24 bg-white relative">
+    <section id="selector" className="py-24 bg-zinc-50 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
           <div className="flex-1 space-y-4">
-            <span className="text-kumho-red font-black uppercase text-xs tracking-[0.3em] italic">Buscador</span>
-            <h2 className="text-5xl font-black uppercase italic tracking-tight text-slate-900">Encontrá tu medida</h2>
+            <span className="text-kumho-red font-black uppercase text-xs tracking-[0.4em] italic">Buscador Oficial</span>
+            <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-slate-900 font-display">Encontrá tu <span className="text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-400">medida</span></h2>
           </div>
-          <div className="flex gap-2">
+          <div className="flex p-1.5 bg-zinc-200/50 rounded-2xl border border-zinc-200">
             {['Auto', 'Camioneta', 'SUV'].map((type) => (
               <button 
                 key={type} 
                 onClick={() => setActiveType(type)}
                 className={cn(
-                  "px-6 py-3 border rounded-full text-[10px] font-black uppercase tracking-widest transition-all active:scale-95",
+                  "px-8 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all active:scale-95",
                   activeType === type 
-                    ? "bg-slate-900 border-slate-900 text-white shadow-lg" 
-                    : "border-zinc-200 text-slate-500 hover:border-kumho-red hover:text-kumho-red"
+                    ? "bg-white text-slate-900 shadow-sm border border-zinc-200" 
+                    : "text-slate-500 hover:text-slate-900"
                 )}
               >
                 {type}
@@ -455,50 +503,67 @@ const TireSelector = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-zinc-50 p-10 rounded-[2.5rem] border border-zinc-100 sleek-shadow space-y-6">
-            <h3 className="text-xl font-black uppercase italic text-slate-800">Dimensiones</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <select 
-                value={width}
-                onChange={(e) => setWidth(e.target.value)}
-                className="bg-white border border-zinc-200 rounded-xl p-4 text-xs outline-none focus:border-kumho-red sleek-shadow cursor-pointer appearance-none"
-              >
-                <option value="">Ancho</option>
-                {widths.map(w => <option key={w} value={w}>{w}</option>)}
-              </select>
-              <select 
-                value={profile}
-                onChange={(e) => setProfile(e.target.value)}
-                className="bg-white border border-zinc-200 rounded-xl p-4 text-xs outline-none focus:border-kumho-red sleek-shadow cursor-pointer appearance-none"
-              >
-                <option value="">Perfil</option>
-                {profiles.map(p => <option key={p} value={p}>{p}</option>)}
-              </select>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="lg:col-span-4 bg-white p-10 rounded-[3rem] border border-zinc-100 sleek-shadow space-y-8 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-kumho-red/5 rounded-bl-[100px] -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700" />
+            <h3 className="text-2xl font-black uppercase italic text-slate-800 relative z-10">Configuración</h3>
+            <div className="space-y-4 relative z-10">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase text-slate-400 pl-1">Ancho</span>
+                  <select 
+                    value={width}
+                    onChange={(e) => setWidth(e.target.value)}
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl p-5 text-sm outline-none focus:border-kumho-red focus:bg-white transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="">---</option>
+                    {widths.map(w => <option key={w} value={w}>{w}</option>)}
+                  </select>
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-bold uppercase text-slate-400 pl-1">Perfil</span>
+                  <select 
+                    value={profile}
+                    onChange={(e) => setProfile(e.target.value)}
+                    className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl p-5 text-sm outline-none focus:border-kumho-red focus:bg-white transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="">---</option>
+                    {profiles.map(p => <option key={p} value={p}>{p}</option>)}
+                  </select>
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-bold uppercase text-slate-400 pl-1">Rodado</span>
+                <select 
+                  value={rim}
+                  onChange={(e) => setRim(e.target.value)}
+                  className="w-full bg-zinc-50 border border-zinc-100 rounded-2xl p-5 text-sm outline-none focus:border-kumho-red focus:bg-white transition-all appearance-none cursor-pointer"
+                >
+                  <option value="">Seleccionar Rodado</option>
+                  {rims.map(r => <option key={r} value={r}>R{r}</option>)}
+                </select>
+              </div>
             </div>
-            <select 
-              value={rim}
-              onChange={(e) => setRim(e.target.value)}
-              className="w-full bg-white border border-zinc-200 rounded-xl p-4 text-xs outline-none focus:border-kumho-red sleek-shadow cursor-pointer appearance-none"
-            >
-              <option value="">Rodado</option>
-              {rims.map(r => <option key={r} value={r}>R{r}</option>)}
-            </select>
             <button 
               onClick={handleSearch}
-              className="w-full bg-kumho-red text-white h-16 rounded-xl font-black uppercase tracking-widest text-xs red-glow hover:scale-[1.02] active:scale-95 transition-all"
+              className="w-full bg-slate-900 text-white h-20 rounded-2xl font-black uppercase tracking-[0.2em] text-xs transition-all hover:bg-kumho-red active:scale-[0.98] shadow-xl relative z-10"
             >
-              Buscar Ahora
+              Consultar Stock
             </button>
           </div>
 
-          <div className="md:col-span-2 relative h-[450px] overflow-hidden group rounded-[2.5rem] border border-zinc-100 sleek-shadow">
-             <ImageWithFallback src="https://images.unsplash.com/photo-1578844541663-4711efaf362a?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 opacity-40 group-hover:opacity-80" alt="Kumho Tech" />
-             <div className="absolute inset-0 bg-gradient-to-r from-zinc-100 via-zinc-100/40 to-transparent flex flex-col justify-center p-16 space-y-6">
-                <h4 className="text-4xl font-black uppercase italic leading-none text-slate-900">Tecnología de<br />Competición</h4>
-                <p className="text-slate-600 max-w-sm text-sm font-medium">Transferimos lo aprendido en pista a cada modelo de nuestra línea PS71 y Ecsta para vos.</p>
-                <div onClick={() => document.getElementById('catalog')?.scrollIntoView({behavior: 'smooth'})} className="text-kumho-red font-black text-xs uppercase tracking-[0.3em] flex items-center gap-3 group italic cursor-pointer">
-                  Explorar Ecsta Series <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+          <div className="lg:col-span-8 relative min-h-[500px] overflow-hidden group rounded-[3rem] border border-zinc-200">
+             <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1578844541663-4711efaf362a?q=80&w=2670&auto=format&fit=crop" 
+                className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0 opacity-40 group-hover:opacity-100" 
+                alt="Kumho Tech" 
+             />
+             <div className="absolute inset-0 bg-gradient-to-r from-zinc-50 via-zinc-50/20 to-transparent flex flex-col justify-center p-14 space-y-8 relative z-10">
+                <div className="w-12 h-1 px-1 bg-kumho-red" />
+                <h4 className="font-display text-5xl md:text-6xl font-black uppercase italic leading-[0.9] text-slate-900">Pasión por la <br /><span className="text-kumho-red">velocidad.</span></h4>
+                <p className="text-slate-900/60 max-w-sm text-base font-semibold leading-relaxed">Transferimos la tecnología de la Formula 3 a cada neumático de calle, garantizando una adherencia excepcional en cualquier condición.</p>
+                <div onClick={() => document.getElementById('catalog')?.scrollIntoView({behavior: 'smooth'})} className="inline-flex items-center gap-4 bg-white/80 backdrop-blur-md px-6 py-4 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] group cursor-pointer border border-white hover:bg-white transition-all shadow-xl w-fit">
+                  Ver Gama Deportiva <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform text-kumho-red" />
                 </div>
              </div>
           </div>
@@ -509,13 +574,26 @@ const TireSelector = () => {
 };
 
 const CTA = () => (
-    <section className="h-[60vh] relative overflow-hidden flex items-center justify-center bg-slate-900 mx-6 mb-12 rounded-[3.5rem] sleek-shadow group">
-        <ImageWithFallback src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=2670&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale scale-110 group-hover:scale-100 transition-transform duration-1000" alt="Road" />
-        <div className="relative text-center space-y-10 px-4">
-           <h2 className="text-5xl md:text-8xl font-black uppercase italic leading-none text-white tracking-tight">Elegí tu próximo <br /> <span className="text-kumho-red">camino.</span></h2>
-           <button className="bg-white text-slate-900 h-16 px-12 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-kumho-red hover:text-white transition-all transform hover:scale-105 red-glow active:scale-95 shadow-2xl">
-             Contactar Asesor Online
-           </button>
+    <section className="h-[70vh] relative overflow-hidden flex items-center justify-center bg-slate-900 mx-6 mb-12 rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)] group">
+        <ImageWithFallback src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=2670&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover opacity-30 grayscale scale-110 group-hover:scale-100 transition-transform duration-1000" alt="Road" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
+        <div className="relative text-center space-y-12 px-6">
+           <motion.h2 
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             className="text-6xl md:text-[10rem] font-black uppercase italic leading-[0.8] text-white tracking-tighter font-display"
+           >
+             Elegí tu <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-kumho-red to-red-500">Destino.</span>
+           </motion.h2>
+           <motion.button 
+             initial={{ opacity: 0 }}
+             whileInView={{ opacity: 1 }}
+             transition={{ delay: 0.2 }}
+             className="group bg-white text-slate-900 h-24 px-20 rounded-3xl font-black uppercase tracking-[0.2em] text-sm hover:bg-kumho-red hover:text-white transition-all transform hover:scale-110 active:scale-95 shadow-2xl relative overflow-hidden"
+           >
+             <span className="relative z-10 font-display">Contactar Asesor Online</span>
+             <div className="absolute inset-0 bg-white group-hover:bg-kumho-red transition-colors" />
+           </motion.button>
         </div>
     </section>
 );
@@ -732,7 +810,7 @@ const ProductDetailPage = () => {
                  </div>
                  <span className="text-xs text-zinc-400 font-bold mb-2 uppercase tracking-tighter">Incluye IVA</span>
               </div>
-              <button className="w-full bg-slate-900 text-white h-20 rounded-2xl font-black uppercase tracking-widest text-lg hover:bg-kumho-red transition-all red-glow flex items-center justify-center gap-4 active:scale-[0.98]">
+              <button className="w-full bg-slate-900 text-white h-16 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-kumho-red transition-all red-glow flex items-center justify-center gap-4 active:scale-[0.98]">
                 Solicitar Cotización <ArrowRight />
               </button>
             </div>
