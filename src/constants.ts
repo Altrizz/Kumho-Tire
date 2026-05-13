@@ -3,6 +3,8 @@ import {
 } from 'lucide-react';
 import { Product } from './types';
 
+export const WHATSAPP_PHONE = "541159678314";
+
 export const PRODUCTS: Product[] = [
   {
     id: 'ps71',
@@ -22,7 +24,7 @@ export const PRODUCTS: Product[] = [
       terreno: '100% Asfalto',
       garantia: '5 Años'
     },
-    longDescription: 'El Ecsta PS71 es el buque insignia de Kumho para vehículos deportivos. Utiliza una red de polímeros híbridos que se adaptan a la temperatura del asfalto, proporcionando una tracción consistente. Sus cuatro surcos principales aseguran que el agua sea evacuada instantáneamente, eliminando el riesgo de aquaplaning.'
+    longDescription: 'El Ecsta PS71 es el buque insignia de Neumaticos MSB para vehículos deportivos. Utiliza una red de polímeros híbridos que se adaptan a la temperatura del asfalto, proporcionando una tracción consistente. Sus cuatro surcos principales aseguran que el agua sea evacuada instantáneamente, eliminando el riesgo de aquaplaning.'
   },
   {
     id: 'ta71',
@@ -42,7 +44,7 @@ export const PRODUCTS: Product[] = [
       terreno: '90% Asfalto / 10% Urbano',
       garantia: '5 Años'
     },
-    longDescription: 'Con el Solus TA71, la ingeniería coreana se enfoca en el confort del pasajero. Los hombros del neumático están diseñados para absorber los impactos de baches y juntas de dilatación comunes en las ciudades argentinas. Es el compañero ideal para viajes largos en familia, donde el silencio es prioridad.'
+    longDescription: 'Con el Solus TA71, la ingeniería de Neumaticos MSB se enfoca en el confort del pasajero. Los hombros del neumático están diseñados para absorber los impactos de baches y juntas de dilatación comunes en las ciudades argentinas. Es el compañero ideal para viajes largos en familia, donde el silencio es prioridad.'
   },
   {
     id: 'hp71',
