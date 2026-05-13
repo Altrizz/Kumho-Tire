@@ -27,16 +27,15 @@ const MSBLogo = ({ className, size = 'md', light = false }: { className?: string
   return (
     <div className={cn("flex items-center", s.gap, className)}>
       <div className={cn(
-        "px-3 py-1.5 rounded-lg font-black italic font-display uppercase leading-none shadow-sm",
-        light ? "bg-white text-msb-red" : "bg-msb-red text-white"
+        "px-3 py-1.5 rounded-lg font-black italic font-display uppercase leading-none shadow-sm bg-msb-red text-white"
       )}>
         <span className={s.text}>MSB</span>
       </div>
       <div className="flex flex-col">
         <span className={cn(
-          "font-black uppercase tracking-[0.2em] italic leading-none border-b border-msb-red/20 pb-0.5", 
+          "font-black uppercase tracking-[0.2em] italic leading-none border-b", 
           s.neum,
-          light ? "text-white" : "text-slate-900"
+          light ? "text-white border-white/20" : "text-slate-900 border-msb-red/20 pb-0.5"
         )}>
           Neumáticos
         </span>
@@ -334,31 +333,40 @@ const FeatureCard: React.FC<{ icon: any, title: string, desc: string, delay?: nu
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="clean-card group flex flex-col items-start text-left"
+    className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-msb-red/30 transition-all duration-300 group flex flex-col items-start text-left relative overflow-hidden"
   >
-    <div className="w-14 h-14 bg-msb-red/5 rounded-2xl flex items-center justify-center mb-8 text-msb-red group-hover:bg-msb-red group-hover:text-white transition-all">
+    <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-110 group-hover:bg-msb-red/5" />
+    <div className="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center mb-8 text-slate-800 group-hover:bg-msb-red group-hover:text-white transition-all shadow-inner">
       <Icon size={28} />
     </div>
     <h3 className="text-xl font-black uppercase italic mb-4 text-slate-800 tracking-tighter">{title}</h3>
-    <p className="text-slate-500 text-sm leading-relaxed font-bold uppercase tracking-tight">{desc}</p>
+    <p className="text-slate-500 text-sm leading-relaxed font-bold uppercase tracking-tight relative z-10">{desc}</p>
   </motion.div>
 );
 
 const FeaturesSection = () => (
-  <section id="features" className="py-24 xl:py-32 bg-slate-50 relative overflow-hidden">
-    <div className="absolute inset-0 industrial-grid opacity-[0.04] pointer-events-none" />
-    <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-white to-transparent" />
-    <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-white to-transparent" />
+  <section id="features" className="py-24 xl:py-32 bg-slate-100 relative overflow-hidden border-t border-slate-200">
+    <div className="absolute inset-0 tech-pattern opacity-[0.03] pointer-events-none" />
+    <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-slate-50 to-transparent" />
+    <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-slate-100 to-transparent" />
+    
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-msb-red/5 blur-[100px] rounded-full pointer-events-none" />
     
     <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full">
       <div className="flex flex-col xl:flex-row gap-12 lg:gap-16 items-center">
         {/* Left column text */}
         <div className="xl:w-1/3 flex flex-col justify-center text-left relative z-20 w-full">
-           <div className="w-20 h-1 bg-msb-red mb-8" />
+           <div className="w-20 h-1.5 bg-msb-red mb-8 rounded-full shadow-[0_0_10px_rgba(237,28,36,0.5)]" />
            <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-slate-900 font-display leading-[0.9] mb-6 drop-shadow-md">
-             Máximo <br/><span className="text-msb-red">Rendimiento</span>
+             Máximo <br/><span className="text-msb-red relative">
+               Rendimiento
+               <svg className="absolute -bottom-2 left-0 w-full h-3 text-msb-red/20" viewBox="0 0 100 20" preserveAspectRatio="none">
+                 <path d="M0 10 Q 50 20 100 10" fill="transparent" stroke="currentColor" strokeWidth="4" />
+               </svg>
+             </span>
            </h2>
-           <p className="text-slate-600 font-bold uppercase tracking-tight text-lg leading-relaxed bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-white shadow-sm">
+           <p className="text-slate-600 font-bold uppercase tracking-tight text-lg leading-relaxed bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/50 shadow-sm relative">
+             <div className="absolute left-0 top-0 bottom-0 w-1 bg-msb-red rounded-l-2xl" />
              Desarrollados con tecnología de avanzada para soportar las exigencias extremas de cada camino.
            </p>
         </div>
@@ -388,28 +396,32 @@ const FeaturesSection = () => (
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
-    <Link to={`/product/${product.id}`} className="clean-card group block">
-      <div className="aspect-square bg-slate-50 border border-slate-100 rounded-xl overflow-hidden relative flex items-center justify-center p-6 mb-6">
+    <Link to={`/product/${product.id}`} className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-msb-red/20 group block transition-all duration-500 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-[100px] -z-10 group-hover:bg-msb-red/5 transition-colors" />
+      <div className="aspect-square bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden relative flex items-center justify-center p-6 mb-6 group-hover:border-msb-red/20 transition-colors">
         <ImageWithFallback 
           src={product.image} 
           alt={product.name} 
-          className="w-full h-full object-contain filter drop-shadow-2xl group-hover:scale-110 transition-transform duration-500" 
+          className="w-full h-full object-contain filter drop-shadow-xl group-hover:scale-110 transition-transform duration-700 ease-out" 
         />
+        <div className="absolute top-3 left-3">
+          <span className="bg-white/80 backdrop-blur-md px-2 py-1 rounded-md text-[9px] font-black uppercase tracking-widest text-msb-red shadow-sm border border-slate-100">Stock</span>
+        </div>
       </div>
       
       <div className="space-y-4">
         <div>
-           <p className="text-msb-red text-[10px] uppercase font-black tracking-widest mb-1">{product.type}</p>
-           <h3 className="text-2xl font-black uppercase italic text-slate-900 tracking-tighter">{product.name}</h3>
+           <p className="text-msb-red text-[10px] uppercase font-black tracking-widest mb-1.5">{product.type}</p>
+           <h3 className="text-xl md:text-2xl font-black uppercase italic text-slate-800 tracking-tighter group-hover:text-msb-red transition-colors">{product.name}</h3>
         </div>
         
-        <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+        <div className="flex items-center justify-between pt-4 border-t border-slate-100 group-hover:border-slate-200 transition-colors">
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase">Consultar precio</p>
-            <p className="text-slate-900 font-black text-2xl font-mono tracking-tighter italic">{product.price}</p>
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Consultar precio</p>
+            <p className="text-slate-900 font-black text-xl md:text-2xl font-mono tracking-tighter italic">{product.price}</p>
           </div>
-          <div className="w-12 h-12 bg-slate-900 text-white rounded-lg flex items-center justify-center group-hover:bg-msb-red transition-all">
-            <ArrowRight size={20} />
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center group-hover:bg-msb-red group-hover:text-white transition-all shadow-inner group-hover:shadow-msb-red/30">
+            <ArrowRight size={20} className="group-hover:-rotate-45 transition-transform duration-300" />
           </div>
         </div>
       </div>
@@ -418,12 +430,19 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 };
 
 const CatalogSection = () => (
-  <section id="catalog" className="py-24 xl:py-32 bg-white relative overflow-hidden xl:-mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.05)]">
-    <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-msb-red/2 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
-    <div className="max-w-7xl mx-auto px-6 relative z-10">
-      <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20 border-b-2 border-slate-200 pb-10">
+  <section id="catalog" className="py-24 xl:py-32 bg-slate-50 relative overflow-hidden xl:-mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-slate-200">
+    <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-msb-red/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+    <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-slate-300/20 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+    <div className="absolute inset-0 tech-pattern opacity-[0.02] pointer-events-none" />
+    
+    <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-16 border-b-2 border-slate-200/60 pb-10">
         <div className="space-y-4">
-           <h2 className="text-7xl md:text-9xl font-black uppercase italic tracking-tighter text-slate-950 font-display leading-none">
+           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 rounded-full mb-2 shadow-sm">
+             <div className="w-2 h-2 bg-msb-red rounded-full animate-pulse" />
+             <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Disponibilidad Inmediata</span>
+           </div>
+           <h2 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase italic tracking-tighter text-slate-900 font-display leading-none drop-shadow-sm">
              STOCK <br /><span className="text-msb-red">ACTUAL</span>
            </h2>
         </div>
