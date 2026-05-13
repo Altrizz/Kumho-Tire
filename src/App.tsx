@@ -518,9 +518,9 @@ const TireSelector = () => {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-msb-red/5 blur-[150px] rounded-full translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 text-white">
-        <div className="flex flex-col xl:flex-row gap-16 lg:gap-24 items-center xl:items-start">
+        <div className="flex flex-col xl:flex-row gap-16 lg:gap-20 items-stretch">
           {/* Header left side */}
-          <div className="text-left space-y-8 w-full xl:w-1/3 pt-12">
+          <div className="text-left flex flex-col justify-center space-y-8 w-full xl:w-1/3 py-8 xl:py-12">
             <div>
                <Badge variant="red" className="mb-4">SELECTOR INTELIGENTE</Badge>
                <h2 className="text-6xl md:text-7xl font-black uppercase italic tracking-tighter text-white font-display leading-[0.85]">
@@ -531,192 +531,216 @@ const TireSelector = () => {
               Filtrá por medida exacta o seleccioná tu vehículo para conocer el equipo original.
             </p>
             
-            {/* New Prominent Toggle Control positioned here */}
-            <div className="bg-white/5 backdrop-blur-md p-2 rounded-2xl border border-white/10 flex gap-2 w-full mt-8 shadow-2xl relative">
-              <motion.div 
-                 layoutId="toggle-bg"
-                 className="absolute inset-2 bg-msb-red rounded-xl z-0"
-                 initial={false}
-                 animate={{ x: searchMode === 'size' ? 0 : '100%' }}
-                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                 style={{ width: 'calc(50% - 12px)' }}
-              />
-              <button 
-                onClick={() => setSearchMode('size')}
-                className={cn(
-                  "flex-1 py-4 rounded-xl font-black uppercase italic text-xs tracking-tighter transition-colors flex items-center justify-center gap-2 relative z-10",
-                  searchMode === 'size' ? "text-white" : "text-slate-500 hover:text-slate-300"
-                )}
-              >
-                <Ruler size={18} /> MEDIDA
-              </button>
-              <button 
-                onClick={() => setSearchMode('vehicle')}
-                className={cn(
-                  "flex-1 py-4 rounded-xl font-black uppercase italic text-xs tracking-tighter transition-colors flex items-center justify-center gap-2 relative z-10",
-                  searchMode === 'vehicle' ? "text-white" : "text-slate-500 hover:text-slate-300"
-                )}
-              >
-                <Car size={18} /> VEHÍCULO
-              </button>
-            </div>
+            {/* Removed the separate toggle div from here to put it inside the card */}
           </div>
 
           {/* Selector Card right side */}
-          <div className="w-full xl:w-2/3 bg-white p-8 md:p-12 xl:p-16 rounded-[3rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.5)] border border-white/20 relative">
-            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+          <div className="w-full xl:w-2/3 bg-white p-8 md:p-10 xl:p-12 rounded-[2.5rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.5)] border border-slate-800/10 relative">
+            <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
               <Layers size={200} />
             </div>
 
-            <div className="relative z-10 space-y-12">
-              <AnimatePresence mode="wait">
-                {searchMode === 'size' ? (
-                  <motion.div 
-                    key="size"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                  >
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Ancho</label>
-                      <select 
-                        value={width}
-                        onChange={(e) => setWidth(e.target.value)}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-5 rounded-2xl font-black text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none"
-                      >
-                        <option value="">Ancho</option>
-                        {widths.map(w => <option key={w} value={w}>{w}</option>)}
-                      </select>
-                    </div>
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Perfil</label>
-                      <select 
-                        value={profile}
-                        onChange={(e) => setProfile(e.target.value)}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-5 rounded-2xl font-black text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none"
-                      >
-                        <option value="">Perfil</option>
-                        {profiles.map(p => <option key={p} value={p}>{p}</option>)}
-                      </select>
-                    </div>
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Rodado</label>
-                      <select 
-                        value={rim}
-                        onChange={(e) => setRim(e.target.value)}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-5 rounded-2xl font-black text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none"
-                      >
-                        <option value="">Rodado</option>
-                        {rims.map(r => <option key={r} value={r}>R{r}</option>)}
-                      </select>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div 
-                    key="vehicle"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-6"
-                  >
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Marca</label>
-                      <select 
-                        value={brand}
-                        onChange={(e) => {
-                          setBrand(e.target.value);
-                          setModel('');
-                          setYear('');
-                          setVersion('');
-                        }}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-4 rounded-2xl font-black text-sm md:text-base outline-none focus:border-msb-red transition-all cursor-pointer appearance-none"
-                      >
-                        <option value="">Marca</option>
-                        {BRANDS.sort((a, b) => a.name.localeCompare(b.name)).map(b => (
-                          <option key={b.name} value={b.name}>{b.name}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Modelo</label>
-                      <select 
-                        value={model}
-                        disabled={!brand}
-                        onChange={(e) => {
-                          setModel(e.target.value);
-                          setYear('');
-                          setVersion('');
-                        }}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-4 rounded-2xl font-black text-sm md:text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 appearance-none"
-                      >
-                        <option value="">Modelo</option>
-                        {models.map(m => (
-                          <option key={m.name} value={m.name}>{m.name}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Año</label>
-                      <select 
-                        value={year}
-                        disabled={!model}
-                        onChange={(e) => {
-                          setYear(e.target.value);
-                          setVersion('');
-                        }}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-4 rounded-2xl font-black text-sm md:text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 appearance-none"
-                      >
-                        <option value="">Año</option>
-                        {years.map(y => (
-                          <option key={y} value={y}>{y}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="space-y-4">
-                      <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-1">Versión / Gama</label>
-                      <select 
-                        value={version}
-                        disabled={!year}
-                        onChange={(e) => setVersion(e.target.value)}
-                        className="w-full bg-slate-50 border-2 border-slate-100 text-slate-900 p-4 rounded-2xl font-black text-sm md:text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 appearance-none"
-                      >
-                        <option value="">Versión</option>
-                        {versions.map(v => (
-                          <option key={v.name} value={v.name}>{v.name}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className="relative z-10 flex flex-col space-y-10">
               
-              <div className="pt-4 border-t border-slate-100">
-                {searchMode === 'vehicle' && selectedVersionObj?.tireSize && year && version && (
-                  <motion.div 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    className="mb-8 p-8 bg-slate-900 rounded-3xl overflow-hidden"
-                  >
-                    <div className="flex flex-col md:flex-row items-center gap-6">
-                      <div className="text-center md:text-left flex-1">
-                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-msb-red mb-2">MEDIDA ORIGINAL SUGERIDA</p>
-                        <p className="text-5xl font-black text-white italic tracking-tighter">{selectedVersionObj.tireSize}</p>
-                      </div>
-                      <div className="w-px h-12 bg-white/20 hidden md:block" />
-                      <p className="text-slate-400 font-bold uppercase text-xs max-w-[200px] text-center md:text-left">
-                        Esta medida corresponde al equipamiento original de la versión <span className="text-white">{version}</span>.
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
+              {/* Tabs */}
+              <div className="bg-slate-100 p-2 rounded-2xl flex gap-2 w-full mx-auto relative shadow-inner">
+                <button 
+                  onClick={() => setSearchMode('size')}
+                  className={cn(
+                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    searchMode === 'size' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
+                  )}
+                >
+                  <Ruler size={18} /> POR MEDIDA
+                </button>
+                <button 
+                  onClick={() => setSearchMode('vehicle')}
+                  className={cn(
+                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    searchMode === 'vehicle' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
+                  )}
+                >
+                  <Car size={18} /> POR VEHÍCULO
+                </button>
+              </div>
 
-                <div className="flex flex-col md:flex-row gap-4 w-full">
+              <div className="min-h-[140px]">
+                <AnimatePresence mode="wait">
+                  {searchMode === 'size' ? (
+                    <motion.div 
+                      key="size"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    >
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Ancho</label>
+                        <div className="relative">
+                          <select 
+                            value={width}
+                            onChange={(e) => setWidth(e.target.value)}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione</option>
+                            {widths.map(w => <option key={w} value={w}>{w}</option>)}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Perfil</label>
+                        <div className="relative">
+                          <select 
+                            value={profile}
+                            onChange={(e) => setProfile(e.target.value)}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione</option>
+                            {profiles.map(p => <option key={p} value={p}>{p}</option>)}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Rodado</label>
+                        <div className="relative">
+                          <select 
+                            value={rim}
+                            onChange={(e) => setRim(e.target.value)}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione</option>
+                            {rims.map(r => <option key={r} value={r}>R{r}</option>)}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                    </motion.div>
+                  ) : (
+                    <motion.div 
+                      key="vehicle"
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                    >
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Marca</label>
+                        <div className="relative">
+                          <select 
+                            value={brand}
+                            onChange={(e) => {
+                              setBrand(e.target.value);
+                              setModel('');
+                              setYear('');
+                              setVersion('');
+                            }}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione Marca</option>
+                            {BRANDS.sort((a, b) => a.name.localeCompare(b.name)).map(b => (
+                              <option key={b.name} value={b.name}>{b.name}</option>
+                            ))}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Modelo</label>
+                        <div className="relative">
+                          <select 
+                            value={model}
+                            disabled={!brand}
+                            onChange={(e) => {
+                              setModel(e.target.value);
+                              setYear('');
+                              setVersion('');
+                            }}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione Modelo</option>
+                            {models.map(m => (
+                              <option key={m.name} value={m.name}>{m.name}</option>
+                            ))}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Año</label>
+                        <div className="relative">
+                          <select 
+                            value={year}
+                            disabled={!model}
+                            onChange={(e) => {
+                              setYear(e.target.value);
+                              setVersion('');
+                            }}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione Año</option>
+                            {years.map(y => (
+                              <option key={y} value={y}>{y}</option>
+                            ))}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Versión / Gama</label>
+                        <div className="relative">
+                          <select 
+                            value={version}
+                            disabled={!year}
+                            onChange={(e) => setVersion(e.target.value)}
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                          >
+                            <option value="">Seleccione Versión</option>
+                            {versions.map(v => (
+                              <option key={v.name} value={v.name}>{v.name}</option>
+                            ))}
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              
+              <div className="pt-6 mt-4 border-t border-slate-100">
+                <AnimatePresence>
+                  {searchMode === 'vehicle' && selectedVersionObj?.tireSize && year && version && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                      animate={{ opacity: 1, height: 'auto', marginBottom: 32 }}
+                      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                      className="p-8 bg-slate-900 rounded-3xl overflow-hidden"
+                    >
+                      <div className="flex flex-col md:flex-row items-center gap-6">
+                        <div className="text-center md:text-left flex-1">
+                          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-msb-red mb-2">MEDIDA ORIGINAL SUGERIDA</p>
+                          <p className="text-5xl font-black text-white italic tracking-tighter">{selectedVersionObj.tireSize}</p>
+                        </div>
+                        <div className="w-px h-12 bg-white/20 hidden md:block" />
+                        <p className="text-slate-400 font-bold uppercase text-xs max-w-[200px] text-center md:text-left leading-relaxed">
+                          Equipamiento original de fábrica para <span className="text-white block mt-1">{brand} {model} {version}</span>
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <div className="flex flex-col sm:flex-row gap-4 w-full">
                   <button 
                     onClick={handleConsultar}
-                    className="msb-button-primary flex-1 h-20 text-lg shadow-[0_20px_50px_-10px_rgba(237,28,36,0.4)] flex items-center justify-center gap-3 group"
+                    className="flex-1 py-5 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
                   >
-                    CONSULTAR <Phone size={20} className="group-hover:scale-110 transition-transform" />
+                    <Phone size={18} className="group-hover:scale-110 transition-transform" />
+                    CONSULTAR ASESOR
                   </button>
                   <button 
                     onClick={() => {
@@ -732,10 +756,10 @@ const TireSelector = () => {
                         navigate(`/catalog?search=${encodeURIComponent(searchParam)}`);
                       }
                     }}
-                    className="bg-msb-red border-2 border-msb-red text-white flex-1 h-20 rounded-2xl text-base md:text-lg font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-3 group hover:bg-red-700 transition-all font-display"
+                    className="flex-[1.5] bg-msb-red text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-lg shadow-msb-red/20 transition-all flex items-center justify-center gap-3 group hover:bg-red-700 text-sm"
                   >
-                    VER EN CATÁLOGO
-                    <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
+                    VER STOCK EN CATÁLOGO
+                    <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
               </div>
