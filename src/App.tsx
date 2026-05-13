@@ -319,7 +319,7 @@ const Hero = () => {
         >
           <Link to="/catalog" className="msb-button-primary h-16 md:h-18 px-10 text-xs md:text-sm shadow-2xl flex items-center justify-center gap-3 group relative overflow-hidden">
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="relative z-10 flex items-center gap-3 text-white font-black tracking-widest uppercase">VER STOCK DISPONIBLE <ArrowRight size={18} /></span>
+            <span className="relative z-10 flex items-center gap-3 text-white font-black tracking-widest uppercase">MIRÁ EL STOCK DISPONIBLE <ArrowRight size={18} /></span>
           </Link>
         </motion.div>
       </div>
@@ -505,12 +505,12 @@ const TireSelector = () => {
   const handleConsultar = () => {
     let message = '';
     if (searchMode === 'size') {
-      if (!width || !profile || !rim) return alert('Por favor, selecciona Ancho, Perfil y Rodado para consultar.');
-      message = `Hola! Estoy consultando desde la web por neumáticos medida: *${width}/${profile} R${rim}*.\n\n¿Tienen stock disponible?`;
+      if (!width || !profile || !rim) return alert('Por favor, seleccioná Ancho, Perfil y Rodado para consultar.');
+      message = `Hola! Les escribo desde la web por los neumáticos medida: *${width}/${profile} R${rim}*.\n\n¿Tienen stock disponible?`;
     } else {
-      if (!brand || !model || !year || !version) return alert('Por favor, completa los datos de Marca, Modelo, Año y Versión de tu vehículo.');
+      if (!brand || !model || !year || !version) return alert('Por favor, completá los datos de Marca, Modelo, Año y Versión de tu vehículo.');
       const size = selectedVersionObj?.tireSize || '';
-      message = `Hola! Quisiera consultar stock para mi vehículo:\n\n*Marca:* ${brand}\n*Modelo:* ${model}\n*Año:* ${year}\n*Versión:* ${version}\n*Medida Sugerida:* ${size}\n\n¿Me podrían confirmar disponibilidad?`;
+      message = `Hola! Les consulto stock para mi vehículo:\n\n*Marca:* ${brand}\n*Modelo:* ${model}\n*Año:* ${year}\n*Versión:* ${version}\n*Medida Sugerida:* ${size}\n\n¿Tendrán disponibilidad? Muchas gracias!`;
     }
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
   };
@@ -533,7 +533,7 @@ const TireSelector = () => {
             <div className="flex flex-col items-center">
                <Badge variant="red" className="mb-4 text-center">SELECTOR INTELIGENTE</Badge>
                <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-white font-display leading-[0.85] text-center">
-                 ENCUENTRA <br className="md:hidden" />TU <span className="text-msb-red">NEUMÁTICO</span>
+                 ENCONTRÁ <br className="md:hidden" />TU <span className="text-msb-red">NEUMÁTICO</span>
                </h2>
             </div>
             <p className="text-slate-400 text-lg sm:text-xl font-bold uppercase leading-relaxed max-w-2xl mx-auto">
@@ -742,21 +742,21 @@ const TireSelector = () => {
                 </AnimatePresence>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-4xl mx-auto">
-                  <button 
-                    onClick={handleConsultar}
-                    className="flex-1 py-5 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
-                  >
-                    <Phone size={18} className="group-hover:scale-110 transition-transform" />
-                    CONSULTAR ASESOR
-                  </button>
+                    <button 
+                      onClick={handleConsultar}
+                      className="flex-1 py-5 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
+                    >
+                      <Phone size={18} className="group-hover:scale-110 transition-transform" />
+                      HABLAR CON UN ASESOR
+                    </button>
                   <button 
                     onClick={() => {
                       let searchParam = '';
                       if (searchMode === 'size') {
-                        if (!width || !profile || !rim) return alert('Por favor, selecciona Ancho, Perfil y Rodado para consultar el catálogo.');
+                        if (!width || !profile || !rim) return alert('Por favor, seleccioná Ancho, Perfil y Rodado para consultar el catálogo.');
                         searchParam = `${width}/${profile} R${rim}`;
                       } else {
-                        if (!brand || !model || !year || !version) return alert('Por favor, completa todos los datos de tu vehículo.');
+                        if (!brand || !model || !year || !version) return alert('Por favor, completá todos los datos de tu vehículo.');
                         searchParam = selectedVersionObj?.tireSize || '';
                       }
                       if (searchParam) {
@@ -808,14 +808,14 @@ const CTA = () => (
           </div>
           <div className="flex flex-col items-center md:items-end gap-10">
             <p className="text-3xl font-black italic text-white text-center md:text-right uppercase max-w-md leading-tight">
-              No dejas tu seguridad en manos de cualquiera. <br />
+              No le des tu seguridad a cualquiera. <br />
               <span className="bg-white text-msb-red px-3 inline-block mt-2">ELEGÍ MSB.</span>
             </p>
             <button 
               onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Hola! Quisiera recibir asesoramiento técnico sobre neumáticos.")}`, '_blank')}
               className="bg-white text-slate-950 px-16 h-24 text-xl font-black uppercase tracking-[0.1em] rounded-2xl shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-4"
             >
-              WHATSAPP DIRECTO <ArrowRight size={28} />
+              ASISTENCIA POR WHATSAPP <ArrowRight size={28} />
             </button>
           </div>
         </div>
@@ -1063,7 +1063,7 @@ const Tire3DViewer = ({ image, name }: { image: string, name: string }) => {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900/10 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-900/5">
         <Info size={12} className="text-slate-500" />
-        <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Mover para inspeccionar 360°</span>
+        <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Mové para ver en 360°</span>
       </div>
     </div>
   );
@@ -1150,10 +1150,10 @@ const ProductDetailPage = () => {
                  </div>
               </div>
               <button 
-                onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hola! Quisiera consultar stock y precio del modelo *${product.name}* (${product.type}).\n\n¿Tienen disponibilidad?`)}`, '_blank')}
+                onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hola! Quisiera consultar stock y precio del modelo *${product.name}* (${product.type}).\n\n¿Tendrán disponibilidad? Muchas gracias.`)}`, '_blank')}
                 className="msb-button-primary w-full h-28 text-lg group"
               >
-                CONSULTAR STOCK POR WHATSAPP <ArrowRight size={32} className="group-hover:translate-x-2 transition-transform" />
+                PEDÍ PRESUPUESTO POR WHATSAPP <ArrowRight size={32} className="group-hover:translate-x-2 transition-transform" />
               </button>
             </div>
           </div>

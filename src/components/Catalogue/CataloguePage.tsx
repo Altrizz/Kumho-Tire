@@ -65,7 +65,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onOpen, isCompared, 
              {isCompared ? <Check size={18} strokeWidth={3} /> : <Layers size={18} />}
            </button>
            <div className="w-24 h-24 md:w-32 md:h-32 bg-slate-50 rounded-xl p-2 flex items-center justify-center relative shrink-0">
-              {product.featured && <Badge variant="red" className="absolute -top-2 -right-2 scale-75 origin-top-right">Best</Badge>}
+              {product.featured && <Badge variant="red" className="absolute -top-2 -right-2 scale-75 origin-top-right">TOP</Badge>}
               <img src={product.image || undefined} alt={product.displayName} className="w-full h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform" />
            </div>
         </div>
@@ -212,7 +212,7 @@ const SpecsTable = ({ sizes }: { sizes: CatalogueProductSize[] }) => {
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
           <input 
             type="text" 
-            placeholder="Buscar por medida (ej: 275/30)..."
+            placeholder="Buscá por medida (ej: 275/30)..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pl-12 pr-4 text-sm outline-none focus:border-msb-red transition-all"
@@ -246,7 +246,7 @@ const SpecsTable = ({ sizes }: { sizes: CatalogueProductSize[] }) => {
                 <td className="px-6 py-4 font-mono text-xs">{s.utqg}</td>
                 <td className="px-6 py-4 text-xs text-slate-500">
                   <Badge variant={s.rimProtector === 'Yes' ? 'red' : 'outline'}>
-                    {s.rimProtector === 'Yes' ? 'SI' : 'NO'}
+                    {s.rimProtector === 'Yes' ? 'SÍ' : 'NO'}
                   </Badge>
                 </td>
               </tr>
@@ -256,7 +256,7 @@ const SpecsTable = ({ sizes }: { sizes: CatalogueProductSize[] }) => {
         {filteredSizes.length === 0 && (
           <div className="py-20 text-center">
              <Info className="mx-auto text-slate-300 mb-4" size={48} />
-             <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">No se encontraron medidas que coincidan</p>
+             <p className="text-slate-400 font-bold uppercase tracking-widest text-[10px]">No encontramos medidas que coincidan</p>
           </div>
         )}
       </div>
@@ -388,10 +388,10 @@ const ProductDetailModal = ({ product, onClose }: { product: CatalogueProduct, o
                   <p className="text-[10px] font-bold text-slate-400 uppercase italic">Se encontraron {product.sizes.length} medidas para este modelo</p>
                 </div>
                 <button 
-                  onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hola! Quisiera consultar stock y precio del modelo *${product.displayName}* (${product.patternCode}).\n\n¿Tienen disponibilidad?`)}`, '_blank')}
+                  onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hola! Quisiera consultar stock y precio del modelo *${product.displayName}* (${product.patternCode}).\n\n¿Tendrán disponibilidad? Muchas gracias.`)}`, '_blank')}
                   className="msb-button-primary h-14 px-8 text-[10px] shadow-lg shadow-msb-red/20 flex items-center gap-2 group"
                 >
-                   CONSULTAR POR ESTE MODELO <Phone size={14} className="group-hover:rotate-12 transition-transform" />
+                   PEDÍ COTIZACIÓN POR WHATSAPP <Phone size={14} className="group-hover:rotate-12 transition-transform" />
                 </button>
              </div>
              <SpecsTable sizes={product.sizes} />
@@ -618,7 +618,7 @@ export const CataloguePage = () => {
     setCompareIds(prev => {
       if (prev.includes(id)) return prev.filter(i => i !== id);
       if (prev.length >= 3) {
-        alert('Solo puedes comparar hasta 3 productos.');
+        alert('Solo podés comparar hasta 3 productos.');
         return prev;
       }
       return [...prev, id];
@@ -637,11 +637,11 @@ export const CataloguePage = () => {
              <div>
                <Badge variant="red" className="mb-4">Premium Engineering</Badge>
                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase italic tracking-tighter text-slate-950 font-display leading-[0.8] drop-shadow-sm">
-                 Catálogo de <br /><span className="text-msb-red">Productos</span>
+                 Stock de <br /><span className="text-msb-red">Productos</span>
                </h1>
              </div>
              <p className="max-w-xl text-slate-500 font-bold uppercase tracking-widest text-xs md:text-sm leading-relaxed">
-               Navegue por patrones de neumáticos, aplicaciones, medidas y especificaciones técnicas oficiales.
+               Navegá por modelos de neumáticos, aplicaciones, medidas y fichas técnicas oficiales.
              </p>
            </div>
            <div className="flex shrink-0 pb-4">
@@ -675,12 +675,12 @@ export const CataloguePage = () => {
 
             <div className="space-y-4">
                <h4 className="text-[10px] font-black uppercase text-slate-400 tracking-[0.3em] flex items-center gap-2">
-                 <Search size={12} className="text-msb-red" /> Buscar
+                 <Search size={12} className="text-msb-red" /> Buscá
                </h4>
                <div className="relative">
                  <input 
                     type="text" 
-                    placeholder="Pattern, medida, VR..."
+                    placeholder="Medida o modelo..."
                     value={search}
                     onChange={(e) => handleSearchChange(e.target.value)}
                     className="w-full bg-white border border-slate-200 rounded-xl py-4 pl-4 pr-10 text-sm outline-none focus:border-msb-red transition-all shadow-sm"
@@ -812,16 +812,16 @@ export const CataloguePage = () => {
                  <div className="absolute inset-0 industrial-grid opacity-10 pointer-events-none" />
                  <SlidersHorizontal className="mx-auto text-slate-200 mb-8" size={80} strokeWidth={1} />
                  <h3 className="text-2xl font-black uppercase italic tracking-tighter text-slate-800 mb-2">Sin resultados</h3>
-                 <p className="text-slate-400 text-sm max-w-xs mx-auto uppercase font-bold tracking-widest">Intenta ajustar los criterios de búsqueda o filtros para encontrar el neumático ideal.</p>
+                 <p className="text-slate-400 text-sm max-w-xs mx-auto uppercase font-bold tracking-widest">Probá ajustando los filtros para encontrar el neumático ideal.</p>
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
                    <button 
                     onClick={() => { handleSearchChange(''); setSelectedCategory('Todos'); setSelectedUsage('Todos'); setSelectedRim('Todos'); }}
                     className="px-10 h-14 bg-slate-100 text-slate-600 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-200 transition-all"
                    >
-                     RESETEAR FILTROS
+                     LIMPIAR FILTROS
                    </button>
                    <button 
-                    onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Hola! No encuentro la medida de neumático que busco en el catálogo.\n\n¿Me podrían asesorar para encontrar la correcta?")}`, '_blank')}
+                    onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Buenas! No encuentro la medida de neumático que busco en la web.\n\n¿Me podrían dar una mano?")}`, '_blank')}
                     className="px-10 h-14 bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-msb-red transition-all shadow-lg flex items-center gap-2"
                    >
                      CONSULTAR POR WHATSAPP <Phone size={14} />

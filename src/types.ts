@@ -8,22 +8,22 @@ export interface Feature {
 
 export interface CatalogueProductSize {
   tireSize: string;
-  loadIndex: string;
-  extraLoad: boolean;
-  recommendedRimWidth: string;
-  approvedRimWidth: string;
-  maxAirPressureBar: string;
-  maxAirPressurePsi: string;
-  maxLoadKg: string;
-  maxLoadLbs: string;
-  sectionWidthMm: string;
-  sectionWidthInch: string;
-  overallDiameterMm: string;
-  overallDiameterInch: string;
-  treadDepthMm: string;
-  treadDepthX32: string;
-  utqg: string;
-  rimProtector: string;
+  loadIndex?: string;
+  extraLoad?: boolean;
+  recommendedRimWidth?: string;
+  approvedRimWidth?: string;
+  maxAirPressureBar?: string;
+  maxAirPressurePsi?: string;
+  maxLoadKg?: string;
+  maxLoadLbs?: string;
+  sectionWidthMm?: string;
+  sectionWidthInch?: string;
+  overallDiameterMm?: string;
+  overallDiameterInch?: string;
+  treadDepthMm?: string;
+  treadDepthX32?: string;
+  utqg?: string;
+  rimProtector?: string;
 }
 
 export interface CatalogueProduct {
