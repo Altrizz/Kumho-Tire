@@ -249,7 +249,7 @@ const ScrollToTop = () => {
 
 const Hero = () => {
   return (
-  <section id="hero" className="relative min-h-[90vh] flex items-center pt-48 pb-32 overflow-hidden bg-slate-50">
+  <section id="hero" className="relative h-[100svh] min-h-[600px] flex items-center overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
@@ -271,21 +271,11 @@ const Hero = () => {
       </motion.div>
     </div>
 
-    {/* Faded Background Text Texture */}
-    <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-[0] opacity-[0.20]">
-       <img 
-         src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80" 
-         className="w-full h-full object-cover mix-blend-multiply"
-         alt=""
-       />
-       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50" />
-    </div>
-
     {/* Soft overlay to depth and blend */}
     <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-[2]" />
     
-    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left mt-8">
-      <div className="space-y-12 max-w-3xl">
+    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left pt-20">
+      <div className="space-y-10 max-w-3xl">
         <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -295,9 +285,9 @@ const Hero = () => {
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Distribuidor N°1 Argentina</span>
         </motion.div>
 
-        <div className="space-y-8 relative">
+        <div className="space-y-6 relative">
           {/* Subtle ghosted tire behind title */}
-          <div className="absolute -top-20 -left-20 w-80 h-80 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
+          <div className="absolute -top-16 -left-16 w-64 h-64 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
              <img 
                src="https://images.unsplash.com/photo-1580274455171-137b77abdd0c?auto=format&fit=crop&w=800&q=80" 
                className="w-full h-full object-contain filter grayscale"
@@ -308,7 +298,7 @@ const Hero = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl sm:text-7xl md:text-[8rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter"
+            className="text-6xl sm:text-7xl md:text-[7.5rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter"
           >
             MÁXIMO <br /><span className="text-msb-red drop-shadow-xl">AGARRE.</span>
           </motion.h1>
@@ -316,7 +306,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-3xl text-slate-600 font-bold italic uppercase leading-tight pr-4 max-w-2xl"
+            className="text-lg md:text-2xl text-slate-600 font-bold italic uppercase leading-tight pr-4 max-w-2xl"
           >
             Tecnología de avanzada para las rutas <span className="text-msb-red underline underline-offset-8 decoration-slate-200">argentinas</span>. Directo de fábrica.
           </motion.p>
@@ -326,11 +316,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-6 pt-4"
+          className="flex flex-col sm:flex-row gap-6 pt-2"
         >
-          <Link to="/catalog" className="msb-button-primary h-20 px-12 text-sm shadow-2xl flex items-center justify-center gap-3 group relative overflow-hidden">
+          <Link to="/catalog" className="msb-button-primary h-16 md:h-18 px-10 text-xs md:text-sm shadow-2xl flex items-center justify-center gap-3 group relative overflow-hidden">
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="relative z-10 flex items-center gap-3 text-white">VER STOCK DISPONIBLE <ArrowRight size={20} /></span>
+            <span className="relative z-10 flex items-center gap-3 text-white font-black tracking-widest uppercase">VER STOCK DISPONIBLE <ArrowRight size={18} /></span>
           </Link>
         </motion.div>
       </div>
@@ -518,24 +508,22 @@ const TireSelector = () => {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-msb-red/5 blur-[150px] rounded-full translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 text-white">
-        <div className="flex flex-col xl:flex-row gap-16 lg:gap-20 items-stretch">
-          {/* Header left side */}
-          <div className="text-left flex flex-col justify-center space-y-8 w-full xl:w-1/3 py-8 xl:py-12">
-            <div>
-               <Badge variant="red" className="mb-4">SELECTOR INTELIGENTE</Badge>
-               <h2 className="text-6xl md:text-7xl font-black uppercase italic tracking-tighter text-white font-display leading-[0.85]">
-                 ENCUENTRA <br />TU <span className="text-msb-red">NEUMÁTICO</span>
+        <div className="flex flex-col gap-12 lg:gap-16 items-center text-center">
+          {/* Header left side => Now Top Header */}
+          <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-3xl">
+            <div className="flex flex-col items-center">
+               <Badge variant="red" className="mb-4 text-center">SELECTOR INTELIGENTE</Badge>
+               <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-white font-display leading-[0.85] text-center">
+                 ENCUENTRA <br className="md:hidden" />TU <span className="text-msb-red">NEUMÁTICO</span>
                </h2>
             </div>
-            <p className="text-slate-400 text-lg font-bold uppercase leading-relaxed pr-4">
+            <p className="text-slate-400 text-lg sm:text-xl font-bold uppercase leading-relaxed max-w-2xl mx-auto">
               Filtrá por medida exacta o seleccioná tu vehículo para conocer el equipo original.
             </p>
-            
-            {/* Removed the separate toggle div from here to put it inside the card */}
           </div>
 
-          {/* Selector Card right side */}
-          <div className="w-full xl:w-2/3 bg-white p-8 md:p-10 xl:p-12 rounded-[2.5rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.5)] border border-slate-800/10 relative">
+          {/* Selector Card right side => Now Full Width */}
+          <div className="w-full bg-white p-8 md:p-10 xl:p-12 rounded-[2.5rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.5)] border border-slate-800/10 relative text-left">
             <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
               <Layers size={200} />
             </div>
@@ -543,7 +531,7 @@ const TireSelector = () => {
             <div className="relative z-10 flex flex-col space-y-10">
               
               {/* Tabs */}
-              <div className="bg-slate-100 p-2 rounded-2xl flex gap-2 w-full mx-auto relative shadow-inner">
+              <div className="bg-slate-100 p-2 rounded-2xl flex gap-2 mx-auto relative shadow-inner max-w-2xl w-full">
                 <button 
                   onClick={() => setSearchMode('size')}
                   className={cn(
@@ -573,7 +561,7 @@ const TireSelector = () => {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                      className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto w-full"
                     >
                       <div className="space-y-3">
                         <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Ancho</label>
@@ -625,7 +613,7 @@ const TireSelector = () => {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto w-full"
                     >
                       <div className="space-y-3">
                         <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Marca</label>
@@ -638,7 +626,7 @@ const TireSelector = () => {
                               setYear('');
                               setVersion('');
                             }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
                           >
                             <option value="">Seleccione Marca</option>
                             {BRANDS.sort((a, b) => a.name.localeCompare(b.name)).map(b => (
@@ -659,7 +647,7 @@ const TireSelector = () => {
                               setYear('');
                               setVersion('');
                             }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
                           >
                             <option value="">Seleccione Modelo</option>
                             {models.map(m => (
@@ -679,7 +667,7 @@ const TireSelector = () => {
                               setYear(e.target.value);
                               setVersion('');
                             }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
                           >
                             <option value="">Seleccione Año</option>
                             {years.map(y => (
@@ -696,7 +684,7 @@ const TireSelector = () => {
                             value={version}
                             disabled={!year}
                             onChange={(e) => setVersion(e.target.value)}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
+                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
                           >
                             <option value="">Seleccione Versión</option>
                             {versions.map(v => (
@@ -734,7 +722,7 @@ const TireSelector = () => {
                   )}
                 </AnimatePresence>
 
-                <div className="flex flex-col sm:flex-row gap-4 w-full">
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-4xl mx-auto">
                   <button 
                     onClick={handleConsultar}
                     className="flex-1 py-5 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
