@@ -249,7 +249,7 @@ const ScrollToTop = () => {
 
 const Hero = () => {
   return (
-  <section id="hero" className="relative h-[100svh] min-h-[600px] flex items-center overflow-hidden bg-slate-50">
+  <section id="hero" className="relative min-h-[90vh] py-32 md:py-40 flex items-center overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
@@ -528,14 +528,14 @@ const TireSelector = () => {
               <Layers size={200} />
             </div>
 
-            <div className="relative z-10 flex flex-col space-y-10">
+            <div className="relative z-10 flex flex-col gap-6">
               
               {/* Tabs */}
-              <div className="bg-slate-100 p-2 rounded-2xl flex gap-2 mx-auto relative shadow-inner max-w-2xl w-full">
+              <div className="bg-slate-100 p-2 rounded-xl flex gap-2 mx-auto relative shadow-inner max-w-xl w-full mb-2">
                 <button 
                   onClick={() => setSearchMode('size')}
                   className={cn(
-                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    "flex-1 py-3 rounded-lg font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
                     searchMode === 'size' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
                   )}
                 >
@@ -544,7 +544,7 @@ const TireSelector = () => {
                 <button 
                   onClick={() => setSearchMode('vehicle')}
                   className={cn(
-                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    "flex-1 py-3 rounded-lg font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
                     searchMode === 'vehicle' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
                   )}
                 >
@@ -552,7 +552,7 @@ const TireSelector = () => {
                 </button>
               </div>
 
-              <div className="min-h-[140px]">
+              <div className="min-h-[96px]">
                 <AnimatePresence mode="wait">
                   {searchMode === 'size' ? (
                     <motion.div 
@@ -699,14 +699,14 @@ const TireSelector = () => {
                 </AnimatePresence>
               </div>
               
-              <div className="pt-6 mt-4 border-t border-slate-100">
+              <div className="pt-6 border-t border-slate-100 flex flex-col gap-6">
                 <AnimatePresence>
                   {searchMode === 'vehicle' && selectedVersionObj?.tireSize && year && version && (
                     <motion.div 
                       initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                      animate={{ opacity: 1, height: 'auto', marginBottom: 32 }}
+                      animate={{ opacity: 1, height: 'auto', marginBottom: 24 }}
                       exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-                      className="p-8 bg-slate-900 rounded-3xl overflow-hidden"
+                      className="p-6 bg-slate-900 rounded-3xl overflow-hidden"
                     >
                       <div className="flex flex-col md:flex-row items-center gap-6">
                         <div className="text-center md:text-left flex-1">
