@@ -59,7 +59,7 @@ const ImageWithFallback = ({ src, alt, className, ...props }: React.ImgHTMLAttri
 
   return (
     <Component
-      src={src}
+      src={src || undefined}
       alt={alt}
       className={className}
       onError={() => setError(true)}
@@ -249,7 +249,7 @@ const ScrollToTop = () => {
 
 const Hero = () => {
   return (
-  <section id="hero" className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-50">
+  <section id="hero" className="relative min-h-[90vh] flex items-center pt-48 pb-32 overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
@@ -284,7 +284,7 @@ const Hero = () => {
     {/* Soft overlay to depth and blend */}
     <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-[2]" />
     
-    <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col items-start text-left mt-8">
+    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left mt-8">
       <div className="space-y-12 max-w-3xl">
         <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -360,7 +360,7 @@ const FeaturesSection = () => (
     <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-white to-transparent" />
     <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-white to-transparent" />
     
-    <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full">
       <div className="flex flex-col xl:flex-row gap-12 lg:gap-16 items-center">
         {/* Left column text */}
         <div className="xl:w-1/3 flex flex-col justify-center text-left relative z-20 w-full">
@@ -428,8 +428,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 };
 
 const CatalogSection = () => (
-  <section id="catalog" className="py-24 bg-white relative overflow-hidden">
-    <div className="absolute inset-0 tech-pattern opacity-[0.02] pointer-events-none" />
+  <section id="catalog" className="py-24 xl:py-32 bg-white relative overflow-hidden xl:-mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.05)]">
     <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-msb-red/2 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
     <div className="max-w-7xl mx-auto px-6 relative z-10">
       <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20 border-b-2 border-slate-200 pb-10">
@@ -508,7 +507,8 @@ const TireSelector = () => {
   };
 
   return (
-    <section id="selector" className="py-32 bg-slate-950 relative overflow-hidden">
+    <section id="selector" className="py-24 xl:py-32 bg-slate-950 relative overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-slate-900/50 to-transparent pointer-events-none" />
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 industrial-grid opacity-10 pointer-events-none" />
       <div className="absolute inset-0 tech-pattern opacity-10 pointer-events-none" />
@@ -517,7 +517,7 @@ const TireSelector = () => {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-msb-red/10 blur-[150px] rounded-full -translate-y-1/2 animate-pulse-slow" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-msb-red/5 blur-[150px] rounded-full translate-y-1/2" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 text-white">
+      <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 text-white">
         <div className="flex flex-col xl:flex-row gap-16 lg:gap-24 items-center xl:items-start">
           {/* Header left side */}
           <div className="text-left space-y-8 w-full xl:w-1/3 pt-12">
@@ -732,7 +732,7 @@ const TireSelector = () => {
                         navigate(`/catalog?search=${encodeURIComponent(searchParam)}`);
                       }
                     }}
-                    className="bg-slate-900 border-2 border-slate-900 text-white flex-1 h-20 rounded-2xl text-base md:text-lg font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-3 group hover:bg-slate-800 transition-all font-display"
+                    className="bg-msb-red border-2 border-msb-red text-white flex-1 h-20 rounded-2xl text-base md:text-lg font-black uppercase tracking-widest shadow-lg flex items-center justify-center gap-3 group hover:bg-red-700 transition-all font-display"
                   >
                     VER EN CATÁLOGO
                     <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
@@ -749,7 +749,7 @@ const TireSelector = () => {
 
 
 const CTA = () => (
-    <section className="py-32 bg-msb-red relative overflow-hidden group">
+    <section className="py-24 xl:py-32 bg-msb-red relative overflow-hidden group">
         <div className="absolute inset-0 tech-pattern opacity-[0.08] pointer-events-none" />
         <div className="absolute inset-0 diagonal-lines opacity-[0.08] pointer-events-none" />
         
@@ -769,7 +769,7 @@ const CTA = () => (
           ))}
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 text-white">
+        <div className="max-w-7xl mx-auto px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 text-white">
           <div className="space-y-6">
             <h2 className="text-7xl md:text-[9rem] font-black uppercase italic leading-[0.8] text-white tracking-tighter font-display">
               VIVÍ EL <br /><span className="text-black/20">PODER.</span>
@@ -806,7 +806,7 @@ const MicroInfo = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-slate-950 py-32 relative z-10">
+  <footer className="bg-slate-950 py-24 xl:py-32 relative z-10">
     <div className="absolute inset-0 industrial-grid opacity-[0.02] pointer-events-none" />
     <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-msb-red/30 to-transparent" />
     <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -1047,7 +1047,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className="pt-20 min-h-screen bg-white industrial-grid">
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:py-24">
+      <div className="max-w-7xl mx-auto px-8 xl:px-12 py-16 lg:py-32">
         <button onClick={() => navigate(-1)} className="flex items-center gap-4 text-slate-400 font-black uppercase text-[11px] tracking-[0.3em] hover:text-msb-red transition-colors mb-12">
           <ArrowLeft size={18} /> VOLVER AL STOCK
         </button>

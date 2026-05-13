@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Search, SlidersHorizontal, ChevronDown, Check, X, 
@@ -66,7 +66,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onOpen, isCompared, 
            </button>
            <div className="w-24 h-24 md:w-32 md:h-32 bg-slate-50 rounded-xl p-2 flex items-center justify-center relative shrink-0">
               {product.featured && <Badge variant="red" className="absolute -top-2 -right-2 scale-75 origin-top-right">Best</Badge>}
-              <img src={product.image} alt={product.displayName} className="w-full h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform" />
+              <img src={product.image || undefined} alt={product.displayName} className="w-full h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform" />
            </div>
         </div>
 
@@ -132,7 +132,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onOpen, isCompared, 
       </div>
 
       <div className="w-full aspect-[4/3] bg-slate-50/50 rounded-xl mb-6 p-4 flex items-center justify-center relative">
-         <img src={product.image} alt={product.displayName} className="w-full h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform" />
+         <img src={product.image || undefined} alt={product.displayName} className="w-full h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform" />
       </div>
 
       <div className="flex-1 space-y-4">
@@ -416,7 +416,7 @@ const ProductCompareBar = ({ selectedIds, onClear, onOpenCompare }: { selectedId
                const p = CATALOGUE_DATA.products.find(p => p.id === id);
                return (
                  <div key={id} className="w-12 h-12 rounded-full bg-white border-2 border-slate-900 overflow-hidden flex items-center justify-center p-2 shadow-lg">
-                    <img src={p?.image} className="w-full h-full object-contain" />
+                    <img src={p?.image || undefined} className="w-full h-full object-contain" />
                  </div>
                );
              })}
@@ -481,7 +481,7 @@ const CompareModal = ({ products, onClose, onRemove }: { products: CatalogueProd
                              <X size={14} />
                            </button>
                            <div className="aspect-square flex items-center justify-center mb-6">
-                              <img src={p.image} className="w-full h-full object-contain filter drop-shadow-xl" />
+                              <img src={p.image || undefined} className="w-full h-full object-contain filter drop-shadow-xl" />
                            </div>
                            <Badge variant="red" className="mb-2">{p.patternCode}</Badge>
                            <h3 className="text-xl font-black uppercase italic text-slate-900 leading-tight">{p.displayName}</h3>
@@ -546,8 +546,13 @@ const CompareModal = ({ products, onClose, onRemove }: { products: CatalogueProd
 
 export const CataloguePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialSearch = searchParams.get('search') || '';
-  const [search, setSearch] = useState(initialSearch);
+  const searchParamValue = searchParams.get('search') || '';
+  const [search, setSearch] = useState(searchParamValue);
+
+  useEffect(() => {
+    setSearch(searchParamValue);
+  }, [searchParamValue]);
+
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const [selectedUsage, setSelectedUsage] = useState('Todos');
   const [selectedRim, setSelectedRim] = useState('Todos');
@@ -575,13 +580,16 @@ export const CataloguePage = () => {
   const rims = ['Todos', ...CATALOGUE_DATA.rimSizes];
 
   const filteredProducts = useMemo(() => {
+    const normalizeSize = (str: string) => str.toLowerCase().replace(/[\spltzr]/g, '');
+    const searchNormalized = normalizeSize(search);
+    
     let result = CATALOGUE_DATA.products.filter(p => {
       const matchSearch = 
         p.displayName.toLowerCase().includes(search.toLowerCase()) ||
         p.patternCode.toLowerCase().includes(search.toLowerCase()) ||
         p.category.toLowerCase().includes(search.toLowerCase()) ||
         p.performanceTags.some(t => t.toLowerCase().includes(search.toLowerCase())) ||
-        p.sizes.some(s => s.tireSize.toLowerCase().includes(search.toLowerCase()));
+        p.sizes.some(s => normalizeSize(s.tireSize).includes(searchNormalized));
 
       const matchCategory = selectedCategory === 'Todos' || p.vehicleType === selectedCategory;
       const matchUsage = selectedUsage === 'Todos' || p.usage.includes(selectedUsage);
@@ -622,7 +630,7 @@ export const CataloguePage = () => {
   return (
     <div className="min-h-screen bg-[#f8f9fa] pt-24 pb-32">
       {/* Catalogue Header */}
-      <section className="bg-white border-b border-slate-200 px-6 py-12 md:py-24 relative overflow-hidden">
+      <section className="bg-white border-b border-slate-200 px-8 xl:px-12 py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid opacity-[0.03] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left flex flex-col md:flex-row md:items-end justify-between gap-12">
            <div className="space-y-6 max-w-2xl">
@@ -648,7 +656,7 @@ export const CataloguePage = () => {
       </section>
 
       {/* Main Layout */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
+      <section className="max-w-7xl mx-auto px-8 xl:px-12 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 items-start">
           
           {/* Sidebar Desktop */}
@@ -827,7 +835,7 @@ export const CataloguePage = () => {
 
       {/* Featured Brands Horizontal */}
       <section className="bg-slate-950 py-12 border-y border-white/5 opacity-40 grayscale contrast-150">
-         <div className="max-w-7xl mx-auto px-6 flex justify-around items-center gap-12 overflow-x-auto no-scrollbar">
+         <div className="max-w-7xl mx-auto px-8 xl:px-12 flex justify-around items-center gap-12 overflow-x-auto no-scrollbar">
             <span className="text-3xl font-black italic text-white font-display">KUMHO</span>
             <span className="text-3xl font-black italic text-white font-display">ECSTA</span>
             <span className="text-3xl font-black italic text-white font-display">SOLUS</span>

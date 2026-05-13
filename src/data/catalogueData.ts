@@ -616,7 +616,7 @@ export const CATALOGUE_DATA = {
       "vehicleType": "Camión y Colectivo",
       "category": "Regional / Dirección",
       "season": ["Todo el Año"],
-      "performanceTags": ["Estabilidad", "Kilometraje", "Kilometraje"],
+      "performanceTags": ["Estabilidad", "Manejo", "Kilometraje"],
       "description": {
         "es": "La pisada ancha proporcionará la mejor estabilidad y el kilometraje incrementado. El eyector de piedra en el canal central mejora la durabilidad.",
         "en": "Wide footprint provides improved stability and increased mileage. Stone ejectors on center groove improve durability."
@@ -1121,6 +1121,22 @@ export const CATALOGUE_DATA = {
       "usage": ["Ciudad / Ruta", "Confort"],
       "sizes": [
         {
+          "tireSize": "225/55 R18",
+          "loadIndex": "98V",
+          "extraLoad": false,
+          "recommendedRimWidth": "7.0",
+          "approvedRimWidth": "6.0 - 8.0",
+          "maxAirPressureBar": "3.0",
+          "maxAirPressurePsi": "44",
+          "treadDepthMm": "7.5",
+          "widthMm": "233",
+          "outerDiameterMm": "705",
+          "staticRadiusMm": "325",
+          "rollingCircumferenceMm": "2150",
+          "maxLoadKg": "750",
+          "maxLoadLbs": "1653"
+        },
+        {
           "tireSize": "235/60 R18",
           "loadIndex": "103H",
           "extraLoad": false,
@@ -1424,6 +1440,22 @@ export const CATALOGUE_DATA = {
       "rimSizes": ["15", "16", "17"],
       "usage": ["Ciudad / Ruta", "4 Estaciones"],
       "sizes": [
+        {
+          "tireSize": "225/60 R17",
+          "loadIndex": "99V",
+          "extraLoad": false,
+          "recommendedRimWidth": "6.5",
+          "approvedRimWidth": "6.0 - 8.0",
+          "maxAirPressureBar": "3.5",
+          "maxAirPressurePsi": "51",
+          "treadDepthMm": "8.0",
+          "widthMm": "228",
+          "outerDiameterMm": "702",
+          "staticRadiusMm": "320",
+          "rollingCircumferenceMm": "2140",
+          "maxLoadKg": "775",
+          "maxLoadLbs": "1709"
+        },
         {
           "tireSize": "235/60 R17",
           "loadIndex": "102V",
