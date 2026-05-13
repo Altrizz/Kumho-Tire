@@ -824,7 +824,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
         <div className="space-y-10">
-          <MSBLogo size="sm" light={true} className="items-start" />
+          <MSBLogo size="sm" light={true} />
           <p className="text-slate-500 text-xs font-black uppercase leading-relaxed tracking-wider">
             Líder en neumáticos de alta performance para las calles argentinas. Calidad premium garantizada.
           </p>
