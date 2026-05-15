@@ -251,16 +251,22 @@ const heroPromos = [
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80",
     title: "MÁXIMO <br /><span className=\"text-msb-red drop-shadow-xl\">AGARRE.</span>",
     subtitle: "Tecnología de avanzada para las rutas <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">argentinas</span>. Directo de fábrica.",
+    badge: "CALIDAD PREMIUM",
+    badgeColor: "bg-slate-900"
   },
   {
-    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1920&q=80",
-    title: "15% OFF <br /><span className=\"text-msb-red drop-shadow-xl\">KUMHO.</span>",
-    subtitle: "Aprovechá nuestra promoción exclusiva en neumáticos Kumho seleccionados por tiempo limitado.",
+    image: "https://images.unsplash.com/photo-1574041796113-1b91eb0e1eb8?auto=format&fit=crop&w=1920&q=80",
+    title: "15% OFF <br /><span className=\"text-amber-500 drop-shadow-xl\">KUMHO.</span>",
+    subtitle: "Aprovechá nuestra promoción exclusiva en neumáticos seleccionados de alta performance. Por tiempo limitado.",
+    badge: "OFERTA EXCLUSIVA",
+    badgeColor: "bg-amber-500"
   },
   {
-    image: "https://images.unsplash.com/photo-1620021312384-ce4993adca90?auto=format&fit=crop&w=1920&q=80",
-    title: "STOCK <br /><span className=\"text-msb-red drop-shadow-xl\">RENOVADO.</span>",
-    subtitle: "Llegó la nueva línea de neumáticos Triangle y Firemax. Rendimiento y confiabilidad que <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">importan</span>.",
+    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80",
+    title: "NUEVO <br /><span className=\"text-msb-red drop-shadow-xl\">INGRESO.</span>",
+    subtitle: "Conocé lo último en la línea SUV de Triangle y Firemax. Desempeño superior asegurado.",
+    badge: "LANZAMIENTO OFICIAL",
+    badgeColor: "bg-msb-red"
   }
 ];
 
@@ -277,7 +283,7 @@ const Hero = () => {
   const currentPromo = heroPromos[currentPromoIndex];
 
   return (
-  <section id="hero" className="relative min-h-[90vh] py-32 md:py-40 flex items-center overflow-hidden bg-slate-50">
+  <section id="hero" className="relative min-h-[85vh] pt-24 md:pt-24 pb-32 md:pb-40 flex items-center overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
@@ -303,7 +309,7 @@ const Hero = () => {
     {/* Soft overlay to depth and blend */}
     <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-[2]" />
     
-    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left pt-20">
+    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left pt-0 mt-0">
       <div className="space-y-10 max-w-3xl">
         <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -314,7 +320,7 @@ const Hero = () => {
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Distribuidor N°1 de Kumho, Triangle y Firemax de Argentina</span>
         </motion.div>
 
-        <div className="space-y-6 relative h-[250px] sm:h-[300px]">
+        <div className="space-y-6 relative min-h-[300px] sm:min-h-[320px] md:min-h-[400px]">
           {/* Subtle ghosted tire behind title */}
           <div className="absolute -top-16 -left-16 w-64 h-64 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
              <img 
@@ -333,6 +339,12 @@ const Hero = () => {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="absolute inset-x-0 top-0"
             >
+              {currentPromo.badge && (
+                <div className={cn("mb-6 inline-flex items-center px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-widest text-white shadow-sm border border-white/20", currentPromo.badgeColor || "bg-msb-red")}>
+                  <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 animate-pulse" />
+                  {currentPromo.badge}
+                </div>
+              )}
               <h1 
                 className="text-6xl sm:text-7xl md:text-[7.5rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter mb-6"
                 dangerouslySetInnerHTML={{ __html: currentPromo.title }}
@@ -349,7 +361,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-6 pt-2"
+          className="flex flex-col sm:flex-row gap-6 pt-2 z-10 relative"
         >
           <Link to="/catalog" className="msb-button-primary h-16 md:h-18 px-10 text-xs md:text-sm shadow-2xl flex items-center justify-center gap-3 group relative overflow-hidden">
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -357,19 +369,35 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Carousel Indicators */}
-        <div className="flex gap-2 pt-4">
-          {heroPromos.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentPromoIndex(i)}
-              className={cn(
-                "h-1.5 rounded-full transition-all duration-300",
-                i === currentPromoIndex ? "w-8 bg-msb-red" : "w-2 bg-slate-300 hover:bg-slate-400"
-              )}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+        {/* Carousel Controls */}
+        <div className="flex items-center gap-6 pt-4 z-10 relative">
+          <div className="flex gap-2">
+            <button 
+              onClick={() => setCurrentPromoIndex((prev) => (prev - 1 + heroPromos.length) % heroPromos.length)}
+              className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-400 hover:bg-white hover:text-slate-900 transition-colors shadow-sm"
+            >
+               <ArrowLeft size={16} />
+            </button>
+            <button 
+              onClick={() => setCurrentPromoIndex((prev) => (prev + 1) % heroPromos.length)}
+              className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-400 hover:bg-white hover:text-slate-900 transition-colors shadow-sm"
+            >
+               <ArrowRight size={16} />
+            </button>
+          </div>
+          <div className="flex gap-2 bg-white/50 backdrop-blur-sm p-3 rounded-full border border-slate-200/50 shadow-sm">
+            {heroPromos.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentPromoIndex(i)}
+                className={cn(
+                  "h-1.5 rounded-full transition-all duration-300",
+                  i === currentPromoIndex ? "w-8 bg-msb-red" : "w-2 bg-slate-300 hover:bg-slate-400"
+                )}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
