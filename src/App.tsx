@@ -246,28 +246,58 @@ const ScrollToTop = () => {
   return null;
 };
 
+const heroPromos = [
+  {
+    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80",
+    title: "MÁXIMO <br /><span className=\"text-msb-red drop-shadow-xl\">AGARRE.</span>",
+    subtitle: "Tecnología de avanzada para las rutas <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">argentinas</span>. Directo de fábrica.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1920&q=80",
+    title: "15% OFF <br /><span className=\"text-msb-red drop-shadow-xl\">KUMHO.</span>",
+    subtitle: "Aprovechá nuestra promoción exclusiva en neumáticos Kumho seleccionados por tiempo limitado.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1620021312384-ce4993adca90?auto=format&fit=crop&w=1920&q=80",
+    title: "STOCK <br /><span className=\"text-msb-red drop-shadow-xl\">RENOVADO.</span>",
+    subtitle: "Llegó la nueva línea de neumáticos Triangle y Firemax. Rendimiento y confiabilidad que <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">importan</span>.",
+  }
+];
+
 const Hero = () => {
+  const [currentPromoIndex, setCurrentPromoIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPromoIndex((prevIndex) => (prevIndex + 1) % heroPromos.length);
+    }, 6000); 
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentPromo = heroPromos[currentPromoIndex];
+
   return (
   <section id="hero" className="relative min-h-[90vh] py-32 md:py-40 flex items-center overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
     <div className="absolute top-0 right-0 w-full h-full md:w-[70%] pointer-events-none overflow-hidden flex items-center justify-end z-[1]">
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative w-full h-full flex items-center justify-center mask-image-left"
-        style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)' }}
-      >
-        <img 
-          src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80" 
-          alt=""
-          className="w-full h-full object-cover filter contrast-[1.1] brightness-[1.1]"
-        />
+      <div className="relative w-full h-full flex items-center justify-center mask-image-left" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)' }}>
+        <AnimatePresence mode="wait">
+          <motion.img 
+            key={currentPromoIndex}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            src={currentPromo.image}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover filter contrast-[1.1] brightness-[1.1]"
+          />
+        </AnimatePresence>
         {/* Abstract Overlays to blend with light background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/10 to-transparent" />
-      </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/10 to-transparent z-[2]" />
+      </div>
     </div>
 
     {/* Soft overlay to depth and blend */}
@@ -281,10 +311,10 @@ const Hero = () => {
             className="inline-flex items-center gap-3 px-6 py-2 bg-slate-200/50 backdrop-blur-sm border border-slate-300/50 rounded-full"
           >
             <div className="w-2 h-2 bg-msb-red rounded-full animate-pulse shadow-[0_0_10px_rgba(211,47,47,0.3)]" />
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Distribuidor N°1 Argentina</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Distribuidor N°1 de Kumho, Triangle y Firemax de Argentina</span>
         </motion.div>
 
-        <div className="space-y-6 relative">
+        <div className="space-y-6 relative h-[250px] sm:h-[300px]">
           {/* Subtle ghosted tire behind title */}
           <div className="absolute -top-16 -left-16 w-64 h-64 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
              <img 
@@ -294,21 +324,25 @@ const Hero = () => {
              />
           </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-6xl sm:text-7xl md:text-[7.5rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter"
-          >
-            MÁXIMO <br /><span className="text-msb-red drop-shadow-xl">AGARRE.</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-lg md:text-2xl text-slate-600 font-bold italic uppercase leading-tight pr-4 max-w-2xl"
-          >
-            Tecnología de avanzada para las rutas <span className="text-msb-red underline underline-offset-8 decoration-slate-200">argentinas</span>. Directo de fábrica.
-          </motion.p>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentPromoIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="absolute inset-x-0 top-0"
+            >
+              <h1 
+                className="text-6xl sm:text-7xl md:text-[7.5rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter mb-6"
+                dangerouslySetInnerHTML={{ __html: currentPromo.title }}
+              />
+              <p 
+                className="text-lg md:text-2xl text-slate-600 font-bold italic uppercase leading-tight pr-4 max-w-2xl"
+                dangerouslySetInnerHTML={{ __html: currentPromo.subtitle }}
+              />
+            </motion.div>
+           </AnimatePresence>
         </div>
         
         <motion.div 
@@ -322,6 +356,21 @@ const Hero = () => {
             <span className="relative z-10 flex items-center gap-3 text-white font-black tracking-widest uppercase">MIRÁ EL STOCK DISPONIBLE <ArrowRight size={18} /></span>
           </Link>
         </motion.div>
+
+        {/* Carousel Indicators */}
+        <div className="flex gap-2 pt-4">
+          {heroPromos.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentPromoIndex(i)}
+              className={cn(
+                "h-1.5 rounded-full transition-all duration-300",
+                i === currentPromoIndex ? "w-8 bg-msb-red" : "w-2 bg-slate-300 hover:bg-slate-400"
+              )}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -366,7 +415,7 @@ const FeaturesSection = () => (
              </span>
            </h2>
            <p className="text-slate-600 font-bold uppercase tracking-tight text-lg leading-relaxed bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/50 shadow-sm relative">
-             <div className="absolute left-0 top-0 bottom-0 w-1 bg-msb-red rounded-l-2xl" />
+             <span className="absolute left-0 top-0 bottom-0 w-1 bg-msb-red rounded-l-2xl" />
              Desarrollados con tecnología de avanzada para soportar las exigencias extremas de cada camino.
            </p>
         </div>
