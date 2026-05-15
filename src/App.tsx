@@ -91,9 +91,13 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="fixed top-0 left-0 w-full z-50 h-8 md:h-10 bg-slate-950 border-b border-slate-800 text-slate-300 text-[8px] sm:text-[9px] md:text-xs font-black uppercase tracking-[0.1em] sm:tracking-[0.2em] px-4 text-center flex justify-center items-center gap-2 md:gap-3 shadow-md">
+         <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-msb-red rounded-full animate-pulse shadow-[0_0_10px_rgba(211,47,47,0.5)]" />
+         Distribuidor Oficial N°1 de <span className="text-white">Kumho, Triangle y Firemax</span> en Argentina
+      </div>
       <nav className={cn(
-        "fixed top-0 left-0 w-full z-50 px-6 h-20 flex items-center justify-between transition-all duration-300",
-        scrolled ? "bg-white/80 backdrop-blur-lg border-b border-slate-200 shadow-sm" : "bg-transparent"
+        "fixed top-8 md:top-10 left-0 w-full z-40 px-6 h-20 flex items-center justify-between transition-all duration-300",
+        scrolled ? "bg-white/90 backdrop-blur-lg border-b border-slate-200 shadow-sm" : "bg-transparent"
       )}>
           <Link to="/" className="hover:opacity-80 transition-opacity">
             <MSBLogo size="sm" />
@@ -126,7 +130,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"
+            className="fixed inset-0 top-8 z-30 bg-white pt-28 px-6 md:hidden"
           >
             <div className="flex flex-col gap-8 text-2xl font-black uppercase italic tracking-tighter text-slate-800">
               <Link to="/catalog" className="text-left py-4 border-b border-zinc-100">Catálogo</Link>
@@ -516,12 +520,15 @@ const CatalogSection = () => (
           <Link to="/catalog" className="msb-button-outline h-16 px-8 shadow-lg flex items-center justify-center whitespace-nowrap">
             LISTA COMPLETA
           </Link>
-          <button 
-            onClick={() => window.open('/catalogo_msb.pdf', '_blank')}
+          <a
+            href="/catalogo_msb.pdf"
+            download="Catalogo_MSB_Neumaticos.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="msb-button-primary bg-slate-900 border-slate-900 hover:bg-slate-800 h-16 px-8 shadow-lg flex items-center justify-center gap-3 whitespace-nowrap"
           >
             <Download size={20} /> DESCARGAR CATÁLOGO
-          </button>
+          </a>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
