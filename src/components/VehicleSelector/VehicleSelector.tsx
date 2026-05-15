@@ -1,6 +1,7 @@
 
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronRight, Phone, MessageSquare, AlertTriangle, CheckCircle2, Car } from 'lucide-react';
+import { Search, ChevronRight, Phone, MessageSquare, AlertTriangle, CheckCircle2, Car, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
 import vehicleData from '../../data/vehicleCatalogue.json';
 
@@ -20,6 +21,7 @@ interface VehicleEntry {
 const WHATSAPP_PHONE = "541159678314";
 
 export const VehicleSelector: React.FC = () => {
+  const navigate = useNavigate();
   const [marca, setMarca] = useState('');
   const [modelo, setModelo] = useState('');
   const [anio, setAnio] = useState<string>('');
@@ -245,14 +247,29 @@ export const VehicleSelector: React.FC = () => {
                       </div>
                     )}
 
-                    <button 
-                      onClick={() => handleWhatsApp(res.medida)}
-                      className="w-full msb-button-primary h-16 flex items-center justify-center gap-4 text-xs shadow-xl shadow-msb-red/20 group overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <Phone size={18} className="group-hover:rotate-12 transition-transform" />
-                      CONSULTAR DISPONIBILIDAD
-                    </button>
+                    <div className="flex flex-col gap-3">
+                      <button 
+                        disabled={!res.medida}
+                        onClick={() => {
+                          if (res.medida) {
+                            navigate(`/catalog?search=${encodeURIComponent(res.medida)}`);
+                          }
+                        }}
+                        className="w-full py-4 border-2 border-slate-200 rounded-2xl font-black uppercase text-[10px] tracking-widest text-slate-700 hover:border-slate-800 hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center gap-3 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                      >
+                        VER PRODUCTOS EN CATÁLOGO
+                        <ArrowRight size={16} />
+                      </button>
+
+                      <button 
+                        onClick={() => handleWhatsApp(res.medida)}
+                        className="w-full msb-button-primary h-16 flex items-center justify-center gap-4 text-xs shadow-xl shadow-msb-red/20 group overflow-hidden"
+                      >
+                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <Phone size={18} className="group-hover:rotate-12 transition-transform" />
+                        CONSULTAR DISPONIBILIDAD
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>

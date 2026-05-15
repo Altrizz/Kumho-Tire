@@ -578,16 +578,19 @@ export const CataloguePage = () => {
   const rims = ['Todos', ...CATALOGUE_DATA.rimSizes];
 
   const filteredProducts = useMemo(() => {
-    const normalizeSize = (str: string) => str.toLowerCase().replace(/[\spltzr]/g, '');
-    const searchNormalized = normalizeSize(search);
+    const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const searchNormalized = normalize(search);
     
     let result = CATALOGUE_DATA.products.filter(p => {
       const matchSearch = 
-        p.displayName.toLowerCase().includes(search.toLowerCase()) ||
-        p.patternCode.toLowerCase().includes(search.toLowerCase()) ||
-        p.category.toLowerCase().includes(search.toLowerCase()) ||
-        p.performanceTags.some(t => t.toLowerCase().includes(search.toLowerCase())) ||
-        p.sizes.some(s => normalizeSize(s.tireSize).includes(searchNormalized));
+        normalize(p.displayName).includes(searchNormalized) ||
+        normalize(p.patternCode).includes(searchNormalized) ||
+        normalize(p.category).includes(searchNormalized) ||
+        p.performanceTags.some(t => normalize(t).includes(searchNormalized)) ||
+        p.sizes.some(s => {
+          const tireNormalized = normalize(s.tireSize);
+          return tireNormalized.includes(searchNormalized) || searchNormalized.includes(tireNormalized);
+        });
 
       const matchCategory = selectedCategory === 'Todos' || p.vehicleType === selectedCategory;
       const matchUsage = selectedUsage === 'Todos' || p.usage.includes(selectedUsage);
@@ -806,25 +809,37 @@ export const CataloguePage = () => {
             </div>
 
             {filteredProducts.length === 0 && (
-              <div className="text-center py-40 bg-white rounded-3xl border border-slate-100 shadow-sm relative overflow-hidden">
-                 <div className="absolute inset-0 industrial-grid opacity-10 pointer-events-none" />
-                 <SlidersHorizontal className="mx-auto text-slate-200 mb-8" size={80} strokeWidth={1} />
-                 <h3 className="text-2xl font-black uppercase italic tracking-tighter text-slate-800 mb-2">Sin resultados</h3>
-                 <p className="text-slate-400 text-sm max-w-xs mx-auto uppercase font-bold tracking-widest">Probá ajustando los filtros para encontrar el neumático ideal.</p>
-                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                   <button 
-                    onClick={() => { handleSearchChange(''); setSelectedCategory('Todos'); setSelectedUsage('Todos'); setSelectedRim('Todos'); }}
-                    className="px-10 h-14 bg-slate-100 text-slate-600 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-200 transition-all"
-                   >
-                     LIMPIAR FILTROS
-                   </button>
-                   <button 
-                    onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Buenas! No encuentro la medida de neumático que busco en la web.\n\n¿Me podrían dar una mano?")}`, '_blank')}
-                    className="px-10 h-14 bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-msb-red transition-all shadow-lg flex items-center gap-2"
-                   >
-                     CONSULTAR POR WHATSAPP <Phone size={14} />
-                   </button>
-                 </div>
+              <div className="bg-white border-2 border-dashed border-slate-100 rounded-[3rem] py-24 md:py-32 px-8 text-center space-y-8 animate-in fade-in zoom-in-95 duration-500 shadow-sm relative overflow-hidden">
+                <div className="absolute inset-0 industrial-grid opacity-[0.03] pointer-events-none" />
+                <div className="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto shadow-inner">
+                  <Search size={40} className="text-slate-200" strokeWidth={1.5} />
+                </div>
+                <div className="space-y-4 max-w-xl mx-auto relative z-10">
+                  <h3 className="text-3xl font-black uppercase italic tracking-tighter text-slate-800">No encontramos resultados</h3>
+                  <p className="text-slate-500 font-bold uppercase tracking-widest text-xs leading-relaxed">
+                    No hay productos que coincidan con "<span className="text-msb-red">{search}</span>". 
+                    Intentá con términos más generales o usá nuestro selector vehicular para saber qué medida necesitás.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+                  <button 
+                    onClick={() => { handleSearchChange(''); setSelectedCategory('Todos'); setSelectedUsage('Todos'); setSelectedRim('Todos'); }} 
+                    className="px-10 h-16 bg-slate-100 text-slate-600 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-slate-200 transition-all"
+                  >
+                    LIMPIAR FILTROS
+                  </button>
+                  <Link 
+                    to="/" 
+                    onClick={() => {
+                      setTimeout(() => {
+                        document.getElementById('selector')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 100);
+                    }}
+                    className="px-10 h-16 bg-slate-900 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-msb-red transition-all shadow-xl flex items-center justify-center gap-3"
+                  >
+                    <Car size={18} /> IR AL SELECTOR VEHICULAR
+                  </Link>
+                </div>
               </div>
             )}
           </main>
