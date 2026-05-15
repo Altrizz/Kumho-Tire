@@ -254,23 +254,23 @@ const ScrollToTop = () => {
 const heroPromos = [
   {
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80",
-    title: "MÁXIMO <br /><span className=\"text-msb-red drop-shadow-xl\">AGARRE.</span>",
-    subtitle: "Caucho de primera para las rutas <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">argentinas</span>. De fábrica a tu auto.",
-    badge: "DISTRIBUIDOR N°1 EN ARGENTINA",
+    title: "MÁXIMO <br /><span className=\"text-msb-red drop-shadow-xl\">CONTROL.</span>",
+    subtitle: "Tecnología de vanguardia para las rutas argentinas. Seguridad certificada en cada kilómetro.",
+    badge: "DISTRIBUIDOR OFICIAL ARGENTINA",
     badgeColor: "bg-slate-200/50 text-slate-800 border-slate-300/50 dot-red backdrop-blur-sm"
   },
   {
     image: "https://images.unsplash.com/photo-1574041796113-1b91eb0e1eb8?auto=format&fit=crop&w=1920&q=80",
-    title: "15% OFF <br /><span className=\"text-amber-500 drop-shadow-xl\">KUMHO.</span>",
-    subtitle: "Aprovechá la movida y ponele gomas nuevas a la nave.",
-    badge: "¡OFERTÓN EXCLUSIVO!",
+    title: "KUMHO <br /><span className=\"text-amber-500 drop-shadow-xl\">15% OFF.</span>",
+    subtitle: "Optimice el rendimiento de su vehículo con beneficios exclusivos en neumáticos Kumho.",
+    badge: "BENEFICIOS EXCLUSIVOS",
     badgeColor: "bg-amber-500 text-white border-white/20 dot-white"
   },
   {
     image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80",
-    title: "NUEVO <br /><span className=\"text-msb-red drop-shadow-xl\">INGRESO.</span>",
-    subtitle: "Recién llegadas para tu SUV. Rendimiento y un aguante bárbaro.",
-    badge: "RECIÉN LLEGADO",
+    title: "ALTA <br /><span className=\"text-msb-red drop-shadow-xl\">EFICIENCIA.</span>",
+    subtitle: "Nuevos ingresos en línea premium. Durabilidad y tracción superior para su SUV.",
+    badge: "LANZAMIENTO DESTACADO",
     badgeColor: "bg-msb-red text-white border-white/20 dot-white"
   }
 ];
@@ -447,17 +447,17 @@ const FeaturesSection = () => (
           <FeatureCard 
             icon={ShieldCheck}
             title="TRACCIÓN"
-            desc="Máximo agarre en asfalto mojado y rutas de ripio."
+            desc="Máximo agarre en asfalto mojado y superficies irregulares."
           />
           <FeatureCard 
             icon={Fan}
             title="DURACIÓN"
-            desc="Compuestos reforzados para el doble de kilometraje."
+            desc="Compuestos optimizados para una vida útil prolongada."
           />
           <FeatureCard 
             icon={Gauge}
-            title="FRENAJE"
-            desc="Respuesta inmediata en situaciones críticas."
+            title="CONTROL"
+            desc="Respuesta de frenado inmediata en situaciones críticas."
           />
         </div>
       </div>
@@ -734,13 +734,13 @@ const CTA = () => (
         <div className="max-w-7xl mx-auto px-8 xl:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 text-white">
           <div className="space-y-6">
             <h2 className="text-7xl md:text-[9rem] font-black uppercase italic leading-[0.8] text-white tracking-tighter font-display">
-              VIVÍ EL <br /><span className="text-black/20">PODER.</span>
+              CALIDAD <br /><span className="text-black/20">SUPERIOR.</span>
             </h2>
           </div>
           <div className="flex flex-col items-center md:items-end gap-10">
             <p className="text-3xl font-black italic text-white text-center md:text-right uppercase max-w-md leading-tight">
-              No le des tu seguridad a cualquiera. <br />
-              <span className="bg-white text-msb-red px-3 inline-block mt-2">ELEGÍ MSB.</span>
+              Seguridad y rendimiento sin concesiones. <br />
+              <span className="bg-white text-msb-red px-3 inline-block mt-2">ELIJA MSB.</span>
             </p>
             <button 
               onClick={() => window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Hola! Quisiera recibir asesoramiento técnico sobre neumáticos.")}`, '_blank')}
