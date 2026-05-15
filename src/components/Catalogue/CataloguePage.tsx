@@ -579,7 +579,10 @@ export const CataloguePage = () => {
 
   const filteredProducts = useMemo(() => {
     const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const normalizeDigits = (str: string) => str.replace(/\D/g, '');
+    
     const searchNormalized = normalize(search);
+    const searchDigits = normalizeDigits(search);
     
     let result = CATALOGUE_DATA.products.filter(p => {
       const matchSearch = 
@@ -589,7 +592,17 @@ export const CataloguePage = () => {
         p.performanceTags.some(t => normalize(t).includes(searchNormalized)) ||
         p.sizes.some(s => {
           const tireNormalized = normalize(s.tireSize);
-          return tireNormalized.includes(searchNormalized) || searchNormalized.includes(tireNormalized);
+          const tireDigits = normalizeDigits(s.tireSize);
+          
+          // Match by normalized string (includes letters like R, P, LT)
+          if (tireNormalized.includes(searchNormalized) || searchNormalized.includes(tireNormalized)) return true;
+          
+          // Match by digits only (e.g. 2055516) - only if we have at least 5 digits to avoid false positives
+          if (searchDigits.length >= 5 && tireDigits.length >= 5) {
+             if (tireDigits.includes(searchDigits) || searchDigits.includes(tireDigits)) return true;
+          }
+          
+          return false;
         });
 
       const matchCategory = selectedCategory === 'Todos' || p.vehicleType === selectedCategory;

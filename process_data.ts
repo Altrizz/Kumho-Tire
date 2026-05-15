@@ -37,7 +37,7 @@ try {
     };
   });
 
-  fs.writeFileSync(outputFile, JSON.stringify(processed, null, 2));
+  fs.writeFileSync(outputFile, JSON.stringify(processed));
   console.log(`Successfully exported ${processed.length} rows to ${outputFile}`);
 } catch (e: any) {
   console.log('Error:', e.message);
