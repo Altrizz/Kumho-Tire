@@ -250,23 +250,23 @@ const heroPromos = [
   {
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1920&q=80",
     title: "MÁXIMO <br /><span className=\"text-msb-red drop-shadow-xl\">AGARRE.</span>",
-    subtitle: "Tecnología de avanzada para las rutas <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">argentinas</span>. Directo de fábrica.",
-    badge: "CALIDAD PREMIUM",
-    badgeColor: "bg-slate-900"
+    subtitle: "Caucho de primera para las rutas <span className=\"text-msb-red underline underline-offset-8 decoration-slate-200\">argentinas</span>. De fábrica a tu auto.",
+    badge: "DISTRIBUIDOR N°1 EN ARGENTINA",
+    badgeColor: "bg-slate-200/50 text-slate-800 border-slate-300/50 dot-red backdrop-blur-sm"
   },
   {
     image: "https://images.unsplash.com/photo-1574041796113-1b91eb0e1eb8?auto=format&fit=crop&w=1920&q=80",
     title: "15% OFF <br /><span className=\"text-amber-500 drop-shadow-xl\">KUMHO.</span>",
-    subtitle: "Aprovechá nuestra promoción exclusiva en neumáticos seleccionados de alta performance. Por tiempo limitado.",
-    badge: "OFERTA EXCLUSIVA",
-    badgeColor: "bg-amber-500"
+    subtitle: "Aprovechá la movida y ponele gomas nuevas a la nave.",
+    badge: "¡OFERTÓN EXCLUSIVO!",
+    badgeColor: "bg-amber-500 text-white border-white/20 dot-white"
   },
   {
     image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80",
     title: "NUEVO <br /><span className=\"text-msb-red drop-shadow-xl\">INGRESO.</span>",
-    subtitle: "Conocé lo último en la línea SUV de Triangle y Firemax. Desempeño superior asegurado.",
-    badge: "LANZAMIENTO OFICIAL",
-    badgeColor: "bg-msb-red"
+    subtitle: "Recién llegadas para tu SUV. Rendimiento y un aguante bárbaro.",
+    badge: "RECIÉN LLEGADO",
+    badgeColor: "bg-msb-red text-white border-white/20 dot-white"
   }
 ];
 
@@ -276,14 +276,14 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromoIndex((prevIndex) => (prevIndex + 1) % heroPromos.length);
-    }, 6000); 
+    }, 10000); 
     return () => clearInterval(interval);
   }, []);
 
   const currentPromo = heroPromos[currentPromoIndex];
 
   return (
-  <section id="hero" className="relative min-h-[85vh] pt-24 md:pt-24 pb-32 md:pb-40 flex items-center overflow-hidden bg-slate-50">
+  <section id="hero" className="relative h-screen md:min-h-[600px] md:max-h-[800px] flex items-center overflow-hidden bg-slate-50">
     <div className="absolute inset-0 industrial-grid opacity-[0.05] z-0" />
     
     {/* Giant Tire / Performance Image Graphic */}
@@ -309,55 +309,45 @@ const Hero = () => {
     {/* Soft overlay to depth and blend */}
     <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent z-[2]" />
     
-    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left pt-0 mt-0">
-      <div className="space-y-10 max-w-3xl">
-        <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-3 px-6 py-2 bg-slate-200/50 backdrop-blur-sm border border-slate-300/50 rounded-full"
-          >
-            <div className="w-2 h-2 bg-msb-red rounded-full animate-pulse shadow-[0_0_10px_rgba(211,47,47,0.3)]" />
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-600 italic">Distribuidor N°1 de Kumho, Triangle y Firemax de Argentina</span>
-        </motion.div>
-
-        <div className="space-y-6 relative min-h-[300px] sm:min-h-[320px] md:min-h-[400px]">
-          {/* Subtle ghosted tire behind title */}
-          <div className="absolute -top-16 -left-16 w-64 h-64 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
-             <img 
-               src="https://images.unsplash.com/photo-1580274455171-137b77abdd0c?auto=format&fit=crop&w=800&q=80" 
-               className="w-full h-full object-contain filter grayscale"
-               alt=""
-             />
-          </div>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentPromoIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="absolute inset-x-0 top-0"
-            >
-              {currentPromo.badge && (
-                <div className={cn("mb-6 inline-flex items-center px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-widest text-white shadow-sm border border-white/20", currentPromo.badgeColor || "bg-msb-red")}>
-                  <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 animate-pulse" />
-                  {currentPromo.badge}
-                </div>
-              )}
-              <h1 
-                className="text-6xl sm:text-7xl md:text-[7.5rem] font-black uppercase leading-[0.85] text-slate-950 italic font-display tracking-tighter mb-6"
-                dangerouslySetInnerHTML={{ __html: currentPromo.title }}
-              />
-              <p 
-                className="text-lg md:text-2xl text-slate-600 font-bold italic uppercase leading-tight pr-4 max-w-2xl"
-                dangerouslySetInnerHTML={{ __html: currentPromo.subtitle }}
-              />
-            </motion.div>
-           </AnimatePresence>
+    <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 w-full flex flex-col items-start text-left pt-20">
+      <div className="space-y-6 max-w-3xl relative min-h-[300px] md:min-h-[380px] flex flex-col justify-center">
+        {/* Subtle ghosted tire behind title */}
+        <div className="absolute -top-16 -left-16 w-64 h-64 opacity-[0.07] pointer-events-none z-[-1] animate-[spin_60s_linear_infinite]">
+           <img 
+             src="https://images.unsplash.com/photo-1580274455171-137b77abdd0c?auto=format&fit=crop&w=800&q=80" 
+             className="w-full h-full object-contain filter grayscale"
+             alt=""
+           />
         </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPromoIndex}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="w-full"
+          >
+            {currentPromo.badge && (
+              <div className={cn("mb-6 max-w-full inline-flex items-center px-4 md:px-5 py-2 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg border whitespace-nowrap", currentPromo.badgeColor)}>
+                <div className={cn("shrink-0 w-2 h-2 rounded-full mr-3 animate-pulse", currentPromo.badgeColor?.includes("dot-red") ? "bg-msb-red shadow-[0_0_10px_rgba(211,47,47,0.3)]" : "bg-white")} />
+                <span className="overflow-hidden text-ellipsis">{currentPromo.badge}</span>
+              </div>
+            )}
+            <h1 
+              className="text-5xl sm:text-6xl md:text-[6.5rem] font-black uppercase leading-[0.85] text-slate-900 italic font-display tracking-tighter mb-6 drop-shadow-sm"
+              dangerouslySetInnerHTML={{ __html: currentPromo.title }}
+            />
+            <p 
+              className="text-base sm:text-lg md:text-xl text-slate-600 font-bold italic uppercase leading-relaxed max-w-2xl border-l-4 border-msb-red pl-4 py-1 bg-white/40 backdrop-blur-md rounded-r-xl shadow-sm"
+              dangerouslySetInnerHTML={{ __html: currentPromo.subtitle }}
+            />
+          </motion.div>
+         </AnimatePresence>
+      </div>
         
-        <motion.div 
+      <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -400,8 +390,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
