@@ -71,7 +71,6 @@ try {
       anio_desde: row.anio_desde_tabla,
       anio_hasta: row.anio_hasta_tabla,
       version: row.gama_version,
-      carroceria: row.tipo_carroceria_dnrpa,
       medida: medida,
       estado: medida ? 'Validado' : row.estado_medida,
       rodado: row.rodado,
@@ -81,6 +80,7 @@ try {
 
   fs.writeFileSync(outputFile, JSON.stringify(processed));
   console.log(`Successfully exported ${processed.length} rows to ${outputFile}`);
+  console.log(`Final file size: ${fs.statSync(outputFile).size} bytes`);
 } catch (e: any) {
   console.log('Error:', e.message);
 }
