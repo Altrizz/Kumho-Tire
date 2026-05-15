@@ -112,6 +112,25 @@ export const CATALOGUE_DATA = {
           "treadDepthX32": "10.1",
           "utqg": "400 A A",
           "rimProtector": "Yes"
+        },
+        {
+          "tireSize": "175/70 R14",
+          "loadIndex": "84T",
+          "extraLoad": false,
+          "recommendedRimWidth": "5.0",
+          "approvedRimWidth": "4.5 - 6.0",
+          "maxAirPressureBar": "3.0",
+          "maxAirPressurePsi": "44",
+          "maxLoadKg": "500",
+          "maxLoadLbs": "1102",
+          "sectionWidthMm": "177",
+          "sectionWidthInch": "7.0",
+          "overallDiameterMm": "602",
+          "overallDiameterInch": "23.7",
+          "treadDepthMm": "8.0",
+          "treadDepthX32": "10.1",
+          "utqg": "400 A A",
+          "rimProtector": "No"
         }
       ]
     },
@@ -170,6 +189,25 @@ export const CATALOGUE_DATA = {
       "rimSizes": ["15", "16", "17", "18", "20"],
       "usage": ["Todo Terreno", "Fuera de Camino"],
       "sizes": [
+        {
+          "tireSize": "265/65 R17",
+          "loadIndex": "112T",
+          "extraLoad": false,
+          "recommendedRimWidth": "8.0",
+          "approvedRimWidth": "7.5 - 9.5",
+          "maxAirPressureBar": "3.5",
+          "maxAirPressurePsi": "51",
+          "maxLoadKg": "1120",
+          "maxLoadLbs": "2469",
+          "sectionWidthMm": "272",
+          "sectionWidthInch": "10.7",
+          "overallDiameterMm": "776",
+          "overallDiameterInch": "30.6",
+          "treadDepthMm": "12.4",
+          "treadDepthX32": "15.7",
+          "utqg": "Not available",
+          "rimProtector": "No"
+        },
         {
           "tireSize": "LT265/70 R17",
           "loadIndex": "121/118S",
@@ -302,6 +340,44 @@ export const CATALOGUE_DATA = {
           "treadDepthX32": "10.1",
           "utqg": "Not available",
           "rimProtector": "No"
+        },
+        {
+          "tireSize": "185/60 R15",
+          "loadIndex": "84H",
+          "extraLoad": false,
+          "recommendedRimWidth": "5.5",
+          "approvedRimWidth": "5.0 - 6.5",
+          "maxAirPressureBar": "3.5",
+          "maxAirPressurePsi": "51",
+          "maxLoadKg": "500",
+          "maxLoadLbs": "1102",
+          "sectionWidthMm": "189",
+          "sectionWidthInch": "7.4",
+          "overallDiameterMm": "603",
+          "overallDiameterInch": "23.7",
+          "treadDepthMm": "8.0",
+          "treadDepthX32": "10.1",
+          "utqg": "Not available",
+          "rimProtector": "No"
+        },
+        {
+          "tireSize": "195/55 R16",
+          "loadIndex": "87V",
+          "extraLoad": false,
+          "recommendedRimWidth": "6.0",
+          "approvedRimWidth": "5.5 - 7.0",
+          "maxAirPressureBar": "3.5",
+          "maxAirPressurePsi": "51",
+          "maxLoadKg": "545",
+          "maxLoadLbs": "1201",
+          "sectionWidthMm": "201",
+          "sectionWidthInch": "7.9",
+          "overallDiameterMm": "621",
+          "overallDiameterInch": "24.4",
+          "treadDepthMm": "8.0",
+          "treadDepthX32": "10.1",
+          "utqg": "Not available",
+          "rimProtector": "No"
         }
       ]
     },
@@ -360,6 +436,25 @@ export const CATALOGUE_DATA = {
       "rimSizes": ["15", "16", "17", "18", "19", "20", "22"],
       "usage": ["Ciudad / Ruta", "4 Estaciones"],
       "sizes": [
+        {
+          "tireSize": "265/65 R17",
+          "loadIndex": "112S",
+          "extraLoad": false,
+          "recommendedRimWidth": "8.0",
+          "approvedRimWidth": "7.5 - 9.5",
+          "maxAirPressureBar": "3.5",
+          "maxAirPressurePsi": "51",
+          "maxLoadKg": "1120",
+          "maxLoadLbs": "2469",
+          "sectionWidthMm": "272",
+          "sectionWidthInch": "10.7",
+          "overallDiameterMm": "776",
+          "overallDiameterInch": "30.6",
+          "treadDepthMm": "11.2",
+          "treadDepthX32": "14.1",
+          "utqg": "Not available",
+          "rimProtector": "No"
+        },
         {
           "tireSize": "LT265/70 R17",
           "loadIndex": "121/118S",
