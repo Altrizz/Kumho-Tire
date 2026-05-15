@@ -224,8 +224,7 @@ const SpecsTable = ({ sizes }: { sizes: CatalogueProductSize[] }) => {
         <table className="w-full text-left text-sm border-collapse min-w-[1000px]">
           <thead className="sticky top-0 bg-slate-50 z-10 border-b border-slate-200">
             <tr>
-              <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400 cursor-pointer hover:text-msb-red transition-colors" onClick={() => requestSort('tireSize')}>Medida</th>
-              <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400 cursor-pointer hover:text-msb-red transition-colors" onClick={() => requestSort('loadIndex')}>IC/VR</th>
+              <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400 cursor-pointer hover:text-msb-red transition-colors" onClick={() => requestSort('tireSize')}>Medida (Global)</th>
               <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400">Ancho Rim (Rec/Apro)</th>
               <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400">Presión (bar/psi)</th>
               <th className="px-6 py-4 font-black uppercase tracking-wider text-[10px] text-slate-400 cursor-pointer hover:text-msb-red transition-colors" onClick={() => requestSort('maxLoadKg')}>Carga Max (kg/lbs)</th>
@@ -237,8 +236,7 @@ const SpecsTable = ({ sizes }: { sizes: CatalogueProductSize[] }) => {
           <tbody className="divide-y divide-slate-100">
             {filteredSizes.map((s, i) => (
               <tr key={i} className="hover:bg-slate-50/50 transition-colors">
-                <td className="px-6 py-4 font-black text-slate-900">{s.tireSize}</td>
-                <td className="px-6 py-4 font-mono text-xs">{s.loadIndex}</td>
+                <td className="px-6 py-4 font-black text-slate-900">{s.tireSize} {s.loadIndex}</td>
                 <td className="px-6 py-4 text-xs text-slate-500">{s.recommendedRimWidth} ({s.approvedRimWidth})</td>
                 <td className="px-6 py-4 text-xs text-slate-500">{s.maxAirPressureBar}/{s.maxAirPressurePsi}</td>
                 <td className="px-6 py-4 text-xs text-slate-500">{s.maxLoadKg}/{s.maxLoadLbs}</td>

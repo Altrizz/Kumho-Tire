@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'mot
 import React, { useRef, useEffect, useState } from 'react';
 import { cn } from '@/src/lib/utils';
 import { CataloguePage } from './components/Catalogue/CataloguePage';
+import { VehicleSelector } from './components/VehicleSelector/VehicleSelector';
 import { 
   Search, ChevronRight, Menu, MapPin, Phone, ArrowRight, Fan, 
   ShieldCheck, Gauge, ArrowLeft, Info, Settings, Wind, Droplets, X,
@@ -521,8 +522,8 @@ const CatalogSection = () => (
             LISTA COMPLETA
           </Link>
           <a
-            href="/catalogo_msb.pdf"
-            download="Catalogo_MSB_Neumaticos.pdf"
+            href="/catalogo_autos_argentina_base_grande.xlsx"
+            download="Catalogo_Selector_Vehicular_MSB.xlsx"
             target="_blank"
             rel="noopener noreferrer"
             className="msb-button-primary bg-slate-900 border-slate-900 hover:bg-slate-800 h-16 px-8 shadow-lg flex items-center justify-center gap-3 whitespace-nowrap"
@@ -532,7 +533,7 @@ const CatalogSection = () => (
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {PRODUCTS.map(p => <ProductCard key={p.id} product={p} />)}
+        {PRODUCTS.filter((p, index, self) => index === self.findIndex(t => t.type === p.type)).slice(0, 8).map(p => <ProductCard key={p.id} product={p} />)}
       </div>
     </div>
   </section>
@@ -549,18 +550,12 @@ const Badge = ({ children, variant = 'gray', className }: { children: React.Reac
 );
 
 const TireSelector = () => {
-  const [searchMode, setSearchMode] = React.useState<'size' | 'vehicle'>('size');
+  const [searchMode, setSearchMode] = React.useState<'size' | 'vehicle'>('vehicle');
   
   // Size State
   const [width, setWidth] = React.useState('');
   const [profile, setProfile] = React.useState('');
   const [rim, setRim] = React.useState('');
-
-  // Vehicle State
-  const [brand, setBrand] = React.useState('');
-  const [model, setModel] = React.useState('');
-  const [year, setYear] = React.useState('');
-  const [version, setVersion] = React.useState('');
 
   const navigate = useNavigate();
 
@@ -568,23 +563,9 @@ const TireSelector = () => {
   const profiles = ['30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80'];
   const rims = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '24'];
 
-  const selectedBrandObj = BRANDS.find(b => b.name === brand);
-  const models = selectedBrandObj ? [...selectedBrandObj.models].sort((a, b) => a.name.localeCompare(b.name)) : [];
-  const selectedModelObj = models.find(m => m.name === model);
-  const years = selectedModelObj ? [...selectedModelObj.years].sort((a, b) => b - a) : [];
-  const versions = selectedModelObj ? [...selectedModelObj.versions].sort((a, b) => a.name.localeCompare(b.name)) : [];
-  const selectedVersionObj = versions.find(v => v.name === version);
-
-  const handleConsultar = () => {
-    let message = '';
-    if (searchMode === 'size') {
-      if (!width || !profile || !rim) return alert('Por favor, seleccioná Ancho, Perfil y Rodado para consultar.');
-      message = `Hola! Les escribo desde la web por los neumáticos medida: *${width}/${profile} R${rim}*.\n\n¿Tienen stock disponible?`;
-    } else {
-      if (!brand || !model || !year || !version) return alert('Por favor, completá los datos de Marca, Modelo, Año y Versión de tu vehículo.');
-      const size = selectedVersionObj?.tireSize || '';
-      message = `Hola! Les consulto stock para mi vehículo:\n\n*Marca:* ${brand}\n*Modelo:* ${model}\n*Año:* ${year}\n*Versión:* ${version}\n*Medida Sugerida:* ${size}\n\n¿Tendrán disponibilidad? Muchas gracias!`;
-    }
+  const handleConsultarSize = () => {
+    if (!width || !profile || !rim) return alert('Por favor, seleccioná Ancho, Perfil y Rodado para consultar.');
+    const message = `Hola! Les escribo desde la web por los neumáticos medida: *${width}/${profile} R${rim}*.\n\n¿Tienen stock disponible?`;
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -599,36 +580,26 @@ const TireSelector = () => {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-msb-red/10 blur-[150px] rounded-full -translate-y-1/2 animate-pulse-slow" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-msb-red/5 blur-[150px] rounded-full translate-y-1/2" />
 
-      <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10 text-white">
-        <div className="flex flex-col gap-12 lg:gap-16 items-center text-center">
-          {/* Header left side => Now Top Header */}
-          <div className="flex flex-col items-center justify-center space-y-6 w-full max-w-3xl">
-            <div className="flex flex-col items-center">
-               <Badge variant="red" className="mb-4 text-center">SELECTOR INTELIGENTE</Badge>
-               <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter text-white font-display leading-[0.85] text-center">
-                 ENCONTRÁ <br className="md:hidden" />TU <span className="text-msb-red">NEUMÁTICO</span>
-               </h2>
-            </div>
-            <p className="text-slate-400 text-lg sm:text-xl font-bold uppercase leading-relaxed max-w-2xl mx-auto">
-              Filtrá por medida exacta o seleccioná tu vehículo para conocer el equipo original.
-            </p>
-          </div>
-
-          {/* Selector Card right side => Now Full Width */}
-          <div className="w-full bg-white p-8 md:p-10 xl:p-12 rounded-[2.5rem] shadow-[0_40px_100px_-15px_rgba(0,0,0,0.5)] border border-slate-800/10 relative text-left">
-            <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
-              <Layers size={200} />
-            </div>
-
-            <div className="relative z-10 flex flex-col gap-6">
-              
+      <div className="max-w-7xl mx-auto px-8 xl:px-12 relative z-10">
+        <div className="flex flex-col items-center text-center mb-16 md:mb-24">
+           <div className="inline-flex items-center gap-4 px-6 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md">
+             <span className="w-2 h-2 rounded-full bg-msb-red animate-pulse" />
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/60">SISTEMA DE BÚSQUEDA INTELIGENTE</span>
+           </div>
+           
+           <h2 className="text-5xl md:text-8xl font-black uppercase italic text-white tracking-tighter leading-[0.85] mb-8">
+             ENCONTRÁ TU <br />
+             <span className="text-msb-red stroke-text">MEDIDA IDEAL</span>
+           </h2>
+           
+           <div className="max-w-2xl w-full">
               {/* Tabs */}
-              <div className="bg-slate-100 p-2 rounded-xl flex gap-2 mx-auto relative shadow-inner max-w-xl w-full mb-2">
+              <div className="bg-white/5 backdrop-blur-xl p-2 rounded-2xl flex gap-2 mx-auto relative border border-white/10 mb-12">
                 <button 
                   onClick={() => setSearchMode('size')}
                   className={cn(
-                    "flex-1 py-3 rounded-lg font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
-                    searchMode === 'size' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
+                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    searchMode === 'size' ? "bg-white text-slate-950 shadow-2xl" : "text-white/40 hover:text-white/60"
                   )}
                 >
                   <Ruler size={18} /> POR MEDIDA
@@ -636,215 +607,102 @@ const TireSelector = () => {
                 <button 
                   onClick={() => setSearchMode('vehicle')}
                   className={cn(
-                    "flex-1 py-3 rounded-lg font-black uppercase italic text-xs md:text-sm tracking-widest transition-all flex items-center justify-center gap-3 z-10",
-                    searchMode === 'vehicle' ? "bg-white text-slate-900 shadow-sm" : "text-slate-400 hover:text-slate-600"
+                    "flex-1 py-4 rounded-xl font-black uppercase italic text-xs tracking-widest transition-all flex items-center justify-center gap-3 z-10",
+                    searchMode === 'vehicle' ? "bg-white text-slate-950 shadow-2xl" : "text-white/40 hover:text-white/60"
                   )}
                 >
                   <Car size={18} /> POR VEHÍCULO
                 </button>
               </div>
+           </div>
+        </div>
 
-              <div className="min-h-[96px]">
-                <AnimatePresence mode="wait">
-                  {searchMode === 'size' ? (
-                    <motion.div 
-                      key="size"
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto w-full"
-                    >
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Ancho</label>
-                        <div className="relative">
-                          <select 
-                            value={width}
-                            onChange={(e) => setWidth(e.target.value)}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione</option>
-                            {widths.map(w => <option key={w} value={w}>{w}</option>)}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Perfil</label>
-                        <div className="relative">
-                          <select 
-                            value={profile}
-                            onChange={(e) => setProfile(e.target.value)}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione</option>
-                            {profiles.map(p => <option key={p} value={p}>{p}</option>)}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Rodado</label>
-                        <div className="relative">
-                          <select 
-                            value={rim}
-                            onChange={(e) => setRim(e.target.value)}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione</option>
-                            {rims.map(r => <option key={r} value={r}>R{r}</option>)}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                    </motion.div>
-                  ) : (
-                    <motion.div 
-                      key="vehicle"
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto w-full"
-                    >
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Marca</label>
-                        <div className="relative">
-                          <select 
-                            value={brand}
-                            onChange={(e) => {
-                              setBrand(e.target.value);
-                              setModel('');
-                              setYear('');
-                              setVersion('');
-                            }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione Marca</option>
-                            {BRANDS.sort((a, b) => a.name.localeCompare(b.name)).map(b => (
-                              <option key={b.name} value={b.name}>{b.name}</option>
-                            ))}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Modelo</label>
-                        <div className="relative">
-                          <select 
-                            value={model}
-                            disabled={!brand}
-                            onChange={(e) => {
-                              setModel(e.target.value);
-                              setYear('');
-                              setVersion('');
-                            }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione Modelo</option>
-                            {models.map(m => (
-                              <option key={m.name} value={m.name}>{m.name}</option>
-                            ))}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Año</label>
-                        <div className="relative">
-                          <select 
-                            value={year}
-                            disabled={!model}
-                            onChange={(e) => {
-                              setYear(e.target.value);
-                              setVersion('');
-                            }}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione Año</option>
-                            {years.map(y => (
-                              <option key={y} value={y}>{y}</option>
-                            ))}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <label className="flex items-center gap-2 text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] pl-2">Versión / Gama</label>
-                        <div className="relative">
-                          <select 
-                            value={version}
-                            disabled={!year}
-                            onChange={(e) => setVersion(e.target.value)}
-                            className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-4 py-4 rounded-xl font-bold text-base outline-none focus:border-msb-red transition-all cursor-pointer disabled:opacity-50 disabled:bg-slate-50 appearance-none hover:bg-slate-100"
-                          >
-                            <option value="">Seleccione Versión</option>
-                            {versions.map(v => (
-                              <option key={v.name} value={v.name}>{v.name}</option>
-                            ))}
-                          </select>
-                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-              
-              <div className="pt-6 border-t border-slate-100 flex flex-col gap-6">
-                <AnimatePresence>
-                  {searchMode === 'vehicle' && selectedVersionObj?.tireSize && year && version && (
-                    <motion.div 
-                      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                      animate={{ opacity: 1, height: 'auto', marginBottom: 24 }}
-                      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-                      className="p-6 bg-slate-900 rounded-3xl overflow-hidden"
-                    >
-                      <div className="flex flex-col md:flex-row items-center gap-6">
-                        <div className="text-center md:text-left flex-1">
-                          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-msb-red mb-2">MEDIDA ORIGINAL SUGERIDA</p>
-                          <p className="text-5xl font-black text-white italic tracking-tighter">{selectedVersionObj.tireSize}</p>
-                        </div>
-                        <div className="w-px h-12 bg-white/20 hidden md:block" />
-                        <p className="text-slate-400 font-bold uppercase text-xs max-w-[200px] text-center md:text-left leading-relaxed">
-                          Equipamiento original de fábrica para <span className="text-white block mt-1">{brand} {model} {version}</span>
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            {searchMode === 'size' ? (
+              <motion.div 
+                key="size"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="max-w-5xl mx-auto w-full bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 block ml-1">Ancho</label>
+                    <div className="relative">
+                      <select 
+                        value={width}
+                        onChange={(e) => setWidth(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-2xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                      >
+                        <option value="">Seleccione</option>
+                        {widths.map(w => <option key={w} value={w}>{w}</option>)}
+                      </select>
+                      <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 block ml-1">Perfil</label>
+                    <div className="relative">
+                      <select 
+                        value={profile}
+                        onChange={(e) => setProfile(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-2xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                      >
+                        <option value="">Seleccione</option>
+                        {profiles.map(p => <option key={p} value={p}>{p}</option>)}
+                      </select>
+                      <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 block ml-1">Rodado</label>
+                    <div className="relative">
+                      <select 
+                        value={rim}
+                        onChange={(e) => setRim(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 text-slate-900 pr-10 pl-5 py-4 rounded-2xl font-bold text-lg outline-none focus:border-msb-red transition-all cursor-pointer appearance-none hover:bg-slate-100"
+                      >
+                        <option value="">Seleccione</option>
+                        {rims.map(r => <option key={r} value={r}>R{r}</option>)}
+                      </select>
+                      <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-slate-400 pointer-events-none" size={20} />
+                    </div>
+                  </div>
+                </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-4xl mx-auto">
-                    <button 
-                      onClick={handleConsultar}
-                      className="flex-1 py-5 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
-                    >
-                      <Phone size={18} className="group-hover:scale-110 transition-transform" />
-                      HABLAR CON UN ASESOR
-                    </button>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <button 
+                    onClick={handleConsultarSize}
+                    className="flex-1 py-6 rounded-2xl font-black border-2 border-slate-200 text-slate-800 hover:border-slate-800 hover:bg-slate-800 hover:text-white uppercase tracking-widest transition-all flex items-center justify-center gap-3 group text-sm"
+                  >
+                    <Phone size={18} className="group-hover:scale-110 transition-transform" />
+                    CONSULTAR CON UN ASESOR
+                  </button>
                   <button 
                     onClick={() => {
-                      let searchParam = '';
-                      if (searchMode === 'size') {
-                        if (!width || !profile || !rim) return alert('Por favor, seleccioná Ancho, Perfil y Rodado para consultar el catálogo.');
-                        searchParam = `${width}/${profile} R${rim}`;
-                      } else {
-                        if (!brand || !model || !year || !version) return alert('Por favor, completá todos los datos de tu vehículo.');
-                        searchParam = selectedVersionObj?.tireSize || '';
-                      }
-                      if (searchParam) {
-                        navigate(`/catalog?search=${encodeURIComponent(searchParam)}`);
-                      }
+                      if (!width || !profile || !rim) return alert('Por favor, completá la medida.');
+                      navigate(`/catalog?search=${encodeURIComponent(`${width}/${profile} R${rim}`)}`);
                     }}
-                    className="flex-[1.5] bg-msb-red text-white py-5 rounded-2xl font-black uppercase tracking-widest shadow-lg shadow-msb-red/20 transition-all flex items-center justify-center gap-3 group hover:bg-red-700 text-sm"
+                    className="flex-[1.5] bg-msb-red text-white py-6 rounded-2xl font-black uppercase tracking-widest shadow-xl shadow-msb-red/20 transition-all flex items-center justify-center gap-3 group hover:bg-red-700 text-sm"
                   >
                     VER STOCK EN CATÁLOGO
                     <ArrowRight size={20} className="group-hover:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            ) : (
+              <motion.div 
+                key="vehicle"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+              >
+                <VehicleSelector />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
