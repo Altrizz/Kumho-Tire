@@ -66,15 +66,15 @@ try {
     if (medida === 0 || medida === '0') medida = null;
 
     return {
-      marca: row.marca,
-      modelo: row.modelo_selector_preliminar,
-      anio_desde: row.anio_desde_tabla,
-      anio_hasta: row.anio_hasta_tabla,
-      version: row.gama_version,
-      medida: medida,
-      estado: medida ? 'Validado' : row.estado_medida,
-      rodado: row.rodado,
-      posicion: row.posicion
+      marca: row.marca || null,
+      modelo: row.modelo_selector_preliminar || null,
+      anio_desde: row.anio_desde_tabla || null,
+      anio_hasta: row.anio_hasta_tabla || null,
+      version: row.gama_version || null,
+      medida: medida || null,
+      estado: (medida ? 'Validado' : row.estado_medida) || 'Pendiente fitment',
+      rodado: row.rodado || null,
+      posicion: row.posicion || 'Delantera/Trasera'
     };
   });
 
