@@ -647,17 +647,16 @@ export const CataloguePage = () => {
       <section className="bg-white border-b border-slate-200 px-8 xl:px-12 py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 industrial-grid opacity-[0.03] pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10 text-left flex flex-col md:flex-row md:items-end justify-between gap-12">
-           <div className="space-y-6 max-w-2xl">
-             <div>
-               <Badge variant="red" className="mb-4">Premium Engineering</Badge>
-               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase italic tracking-tighter text-slate-950 font-display leading-[0.8] drop-shadow-sm">
-                 Stock de <br /><span className="text-msb-red">Productos</span>
-               </h1>
-             </div>
-             <p className="max-w-xl text-slate-500 font-bold uppercase tracking-widest text-xs md:text-sm leading-relaxed">
-               Navegá por modelos de neumáticos, aplicaciones, medidas y fichas técnicas oficiales.
-             </p>
-           </div>
+            <div className="space-y-6 max-w-2xl">
+              <div>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase italic tracking-tighter text-slate-950 font-display leading-[0.8] drop-shadow-sm">
+                  Stock de <br /><span className="text-msb-red">Productos</span>
+                </h1>
+              </div>
+              <p className="max-w-xl text-slate-500 font-bold uppercase tracking-widest text-xs md:text-sm leading-relaxed">
+                Navegá por modelos de neumáticos, aplicaciones, medidas y fichas técnicas oficiales.
+              </p>
+            </div>
            <div className="flex shrink-0 pb-4">
              <button 
                 onClick={() => window.open('/catalogo_msb.pdf', '_blank')}
