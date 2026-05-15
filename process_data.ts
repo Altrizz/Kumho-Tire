@@ -78,7 +78,7 @@ try {
     };
   });
 
-  fs.writeFileSync(outputFile, JSON.stringify(processed, null, 2));
+  fs.writeFileSync(outputFile, JSON.stringify(processed));
   console.log(`Successfully exported ${processed.length} rows to ${outputFile}`);
   console.log(`Final file size: ${fs.statSync(outputFile).size} bytes`);
 } catch (e: any) {
