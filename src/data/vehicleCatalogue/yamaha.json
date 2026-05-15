@@ -1,0 +1,46 @@
+[
+  {
+    "marca": "YAMAHA",
+    "modelo": "VIKING",
+    "anio_desde": "2008",
+    "anio_hasta": "2026/0Km",
+    "version": "VIKING VI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "YAMAHA",
+    "modelo": "YXR700F",
+    "anio_desde": "2002",
+    "anio_hasta": "2026/0Km",
+    "version": "YXR700F RHINO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "YAMAHA",
+    "modelo": "YXR700F",
+    "anio_desde": "2008",
+    "anio_hasta": "2014",
+    "version": "YXR700F RHINO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "YAMAHA",
+    "modelo": "YXZ1000R",
+    "anio_desde": "2010",
+    "anio_hasta": "2020",
+    "version": "YXZ1000R SE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "marca": "GMC",
+    "modelo": "ACADIA",
+    "anio_desde": "2007",
+    "anio_hasta": "2011",
+    "version": "ACADIA SLT AWD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "JIMMY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "JIMMY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "JIMMY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "JIMMY SLE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "JIMMY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "JIMMY SLT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "SAVANA",
+    "anio_desde": "2004",
+    "anio_hasta": "2010",
+    "version": "SAVANA 1500",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "SIERRA",
+    "anio_desde": "2005",
+    "anio_hasta": "2006",
+    "version": "SIERRA CLASIC 1500",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "SUBURBAN",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SUBURBAN",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "SUBURBAN",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SUBURBAN 6.2L DIESEL",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "SUBURBAN",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SUBURBAN SLT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "YUKON",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "YUKON",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "YUKON",
+    "anio_desde": "2007",
+    "anio_hasta": "2011",
+    "version": "YUKON DENALI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "YUKON",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "YUKON GT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "YUKON",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "YUKON SLT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "YUKON",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "YUKON XL DENALI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GMC",
+    "modelo": "ACADIA",
+    "anio_desde": "2011",
+    "anio_hasta": "2014",
+    "version": "ACADIA 3.6L",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

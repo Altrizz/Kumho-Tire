@@ -1,0 +1,178 @@
+[
+  {
+    "marca": "LIFAN",
+    "modelo": "1022",
+    "anio_desde": "2015",
+    "anio_hasta": "2020",
+    "version": "1022 1.3",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "FOISON",
+    "anio_desde": "2015",
+    "anio_hasta": "2020",
+    "version": "FOISON",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "FOISON",
+    "anio_desde": "2017",
+    "anio_hasta": "2020",
+    "version": "FOISON BOX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "FOISON",
+    "anio_desde": "2017",
+    "anio_hasta": "2020",
+    "version": "FOISON BOX (CARROZADA)",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "FOISON",
+    "anio_desde": "2016",
+    "anio_hasta": "2020",
+    "version": "FOISON CARGO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "LF5021XXY",
+    "anio_desde": "2017",
+    "anio_hasta": "2020",
+    "version": "LF5021XXY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "M7",
+    "anio_desde": "2018",
+    "anio_hasta": "2020",
+    "version": "M7 2.0 VVT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "MYWAY",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "MYWAY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "MYWAY",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "MYWAY 1.8",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "MYWAY",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "MYWAY 1.8 VVT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X50",
+    "anio_desde": "2016",
+    "anio_hasta": "2019",
+    "version": "X50 1.5 VVT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X50",
+    "anio_desde": "2016",
+    "anio_hasta": "2019",
+    "version": "X50 1.5 VVT TX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X60",
+    "anio_desde": "2016",
+    "anio_hasta": "2019",
+    "version": "X60 1.8 VVT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X70",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "X70",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X70",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "X70",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LIFAN",
+    "modelo": "X70",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "X70 2.0 VVT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

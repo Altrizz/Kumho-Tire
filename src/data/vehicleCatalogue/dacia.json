@@ -1,0 +1,112 @@
+[
+  {
+    "marca": "DACIA",
+    "modelo": "BERLINA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "BERLINA 1.6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "BREAK",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "BREAK 1.6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "DOKKER",
+    "anio_desde": "2013",
+    "anio_hasta": "2018",
+    "version": "DOKKER 1.5",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "DUSTER",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "DUSTER 1.5",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "LOGAN",
+    "anio_desde": "2007",
+    "anio_hasta": "2011",
+    "version": "LOGAN",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "R1.6",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "R1.6 4X4 (CABINA DOBLE)",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "R1.6",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "R1.6 4X4 (CABINA SIMPLE)",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "R524",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "R524 GT 1.6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "SANDERO",
+    "anio_desde": "2011",
+    "anio_hasta": "2014",
+    "version": "SANDERO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DACIA",
+    "modelo": "SANDERO",
+    "anio_desde": "2013",
+    "anio_hasta": "2015",
+    "version": "SANDERO STEPWAY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

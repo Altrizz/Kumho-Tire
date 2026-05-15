@@ -1,0 +1,46 @@
+[
+  {
+    "marca": "GAMMA",
+    "modelo": "UFORCE",
+    "anio_desde": "2015",
+    "anio_hasta": "2026/0Km",
+    "version": "UFORCE 800",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAMMA",
+    "modelo": "ZFORCE",
+    "anio_desde": "2014",
+    "anio_hasta": "2018",
+    "version": "ZFORCE 550 EX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAMMA",
+    "modelo": "ZFORCE",
+    "anio_desde": "2014",
+    "anio_hasta": "2018",
+    "version": "ZFORCE 625 EX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAMMA",
+    "modelo": "ZFORCE",
+    "anio_desde": "2015",
+    "anio_hasta": "2026/0Km",
+    "version": "ZFORCE 800 EX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

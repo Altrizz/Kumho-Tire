@@ -1,0 +1,46 @@
+[
+  {
+    "marca": "PROTON",
+    "modelo": "416",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "416 GLXI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PROTON",
+    "modelo": "420",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "420 TD GLS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PROTON",
+    "modelo": "420",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "420 TD GLS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PROTON",
+    "modelo": "420D",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "420D GLS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "DOMY",
+    "modelo": "K2",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "K2",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DOMY",
+    "modelo": "V1",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "V1",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, ChevronRight, Phone, MessageSquare, AlertTriangle, CheckCircle2, Car, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
-import vehicleData from '../../data/vehicleCatalogue.json';
+import vehicleData from '../../data/catalogueLoader';
 
 interface VehicleEntry {
   marca: string;

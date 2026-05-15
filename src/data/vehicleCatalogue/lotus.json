@@ -1,0 +1,123 @@
+[
+  {
+    "marca": "LOTUS",
+    "modelo": "ELISE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "ELISE CUP 250",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "ELISE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "ELISE SPORT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "ELISE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "ELISE SPORT 220",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EMIRA",
+    "anio_desde": "2022",
+    "anio_hasta": "2022",
+    "version": "EMIRA V6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EVORA",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EVORA 400",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EVORA",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EVORA SPORT 410",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EXIGE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EXIGE 350 ROADSTER",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EXIGE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EXIGE SPORT 350",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EXIGE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EXIGE SPORT 350 ROADSTE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EXIGE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EXIGE SPORT 380",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LOTUS",
+    "modelo": "EXIGE",
+    "anio_desde": "2017",
+    "anio_hasta": "2021",
+    "version": "EXIGE SPORT 380 ROADSTE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

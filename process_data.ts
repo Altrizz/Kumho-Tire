@@ -1,6 +1,7 @@
 
 import XLSX from 'xlsx';
 import fs from 'fs';
+import path from 'path';
 
 const filePath = './public/catalogo_autos_argentina_base_grande.xlsx';
 const outputFile = './src/data/vehicleCatalogue.json';
@@ -78,9 +79,28 @@ try {
     };
   });
 
-  fs.writeFileSync(outputFile, JSON.stringify(processed, null, 2));
-  console.log(`Successfully exported ${processed.length} rows to ${outputFile}`);
-  console.log(`Final file size: ${fs.statSync(outputFile).size} bytes`);
+  const outputDir = './src/data/vehicleCatalogue';
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  // Clear existing JSON files in directory to avoid orphans
+  const existingFiles = fs.readdirSync(outputDir).filter(f => f.endsWith('.json'));
+  existingFiles.forEach(f => fs.unlinkSync(path.join(outputDir, f)));
+
+  const brands: Record<string, any[]> = {};
+  processed.forEach((item: any) => {
+    const brand = (item.marca || 'UNKNOWN').toLowerCase().replace(/[^a-z0-9]/g, '-');
+    if (!brands[brand]) brands[brand] = [];
+    brands[brand].push(item);
+  });
+
+  for (const [brand, entries] of Object.entries(brands)) {
+    const fileName = path.join(outputDir, `${brand}.json`);
+    fs.writeFileSync(fileName, JSON.stringify(entries, null, 2));
+  }
+
+  console.log(`Successfully exported ${processed.length} rows split into ${Object.keys(brands).length} files in ${outputDir}`);
 } catch (e: any) {
   console.log('Error:', e.message);
 }

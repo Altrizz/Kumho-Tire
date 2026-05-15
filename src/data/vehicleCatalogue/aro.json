@@ -1,0 +1,101 @@
+[
+  {
+    "marca": "ARO",
+    "modelo": "10",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10 SPARTANA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.0",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.0",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.1",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.1",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.2",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.2",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.3",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.3",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.4",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "10.4",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.8",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.8",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.9",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.9",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARO",
+    "modelo": "10.9",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "10.9",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "marca": "KYC",
+    "modelo": "MAMUT",
+    "anio_desde": "2020",
+    "anio_hasta": "2026/0Km",
+    "version": "MAMUT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "MAMUT",
+    "anio_desde": "2020",
+    "anio_hasta": "2026/0Km",
+    "version": "MAMUT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "MAMUT",
+    "anio_desde": "2020",
+    "anio_hasta": "2022",
+    "version": "MAMUT BOX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "X3",
+    "anio_desde": "2020",
+    "anio_hasta": "2026/0Km",
+    "version": "X3",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "X3",
+    "anio_desde": "2020",
+    "anio_hasta": "2026/0Km",
+    "version": "X3",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "X3",
+    "anio_desde": "2020",
+    "anio_hasta": "2022",
+    "version": "X3 CARGO BOX (CARROZAD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYC",
+    "modelo": "X3",
+    "anio_desde": "2020",
+    "anio_hasta": "2026/0Km",
+    "version": "X3 REFRIGERATOR (CARROZPICK-UP",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

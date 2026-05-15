@@ -1,0 +1,46 @@
+[
+  {
+    "marca": "JETOUR",
+    "modelo": "DASHING",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "DASHING",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "JETOUR",
+    "modelo": "T1",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "T1",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "JETOUR",
+    "modelo": "X70",
+    "anio_desde": "2021",
+    "anio_hasta": "2026/0Km",
+    "version": "X70",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "JETOUR",
+    "modelo": "X70",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "X70 PLUS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

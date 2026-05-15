@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "DONGFENG",
+    "modelo": "MINI",
+    "anio_desde": "2005",
+    "anio_hasta": "2014",
+    "version": "MINI STAR",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DONGFENG",
+    "modelo": "ZNA",
+    "anio_desde": "2012",
+    "anio_hasta": "2016",
+    "version": "ZNA RICH",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

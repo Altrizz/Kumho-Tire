@@ -1,0 +1,90 @@
+[
+  {
+    "marca": "SANTANA",
+    "modelo": "JX",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "JX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI 1.9TD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI 1.9TD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI 1.9TD (TECHO DE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SAMURAI",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "SAMURAI 1.9TD (TECHO ME",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "SANTANA",
+    "modelo": "SJ-410",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SJ-410",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

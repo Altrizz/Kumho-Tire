@@ -1,0 +1,13 @@
+[
+  {
+    "marca": "CADILLAC",
+    "modelo": "ESCALADE",
+    "anio_desde": "2005",
+    "anio_hasta": "2015",
+    "version": "ESCALADE ESV",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

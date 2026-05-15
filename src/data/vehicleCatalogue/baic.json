@@ -1,0 +1,167 @@
+[
+  {
+    "marca": "BAIC",
+    "modelo": "BJ30",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ30",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "BJ30E",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ30E",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "BJ30E",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ30E",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "BJ40",
+    "anio_desde": "2023",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ40",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "BJ40",
+    "anio_desde": "2023",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ40 2.3T AWD AT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "BJ60",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "BJ60",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "D20",
+    "anio_desde": "2018",
+    "anio_hasta": "2021",
+    "version": "D20 HATCHBACK",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "EU5",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "EU5",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "EU5",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "EU5 ELECTRICO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "U5",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "U5 PLUS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "X25",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "X25",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "X25EV",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "X25EV",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "X35",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "X35",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "X55",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "X55",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BAIC",
+    "modelo": "X65",
+    "anio_desde": "2020",
+    "anio_hasta": "2021",
+    "version": "X65",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "marca": "KYMCO",
+    "modelo": "UXV",
+    "anio_desde": "2009",
+    "anio_hasta": "2013",
+    "version": "UXV 500",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYMCO",
+    "modelo": "UXV",
+    "anio_desde": "2018",
+    "anio_hasta": "2018",
+    "version": "UXV 700",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYMCO",
+    "modelo": "UXV",
+    "anio_desde": "2018",
+    "anio_hasta": "2018",
+    "version": "UXV 700I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KYMCO",
+    "modelo": "UXV500",
+    "anio_desde": "2009",
+    "anio_hasta": "2013",
+    "version": "UXV500",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

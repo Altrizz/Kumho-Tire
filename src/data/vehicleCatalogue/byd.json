@@ -1,0 +1,57 @@
+[
+  {
+    "marca": "BYD",
+    "modelo": "DOLPHIN",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "DOLPHIN MINI EV GL",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BYD",
+    "modelo": "DOLPHIN",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "DOLPHIN MINI EV GS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BYD",
+    "modelo": "SONG",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "SONG PRO DM-I GL",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BYD",
+    "modelo": "SONG",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "SONG PRO DM-I GS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "BYD",
+    "modelo": "YUAN",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "YUAN PRO EV GS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

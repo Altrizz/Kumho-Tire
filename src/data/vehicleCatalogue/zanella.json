@@ -1,0 +1,57 @@
+[
+  {
+    "marca": "ZANELLA",
+    "modelo": "FX50",
+    "anio_desde": "2008",
+    "anio_hasta": "2011",
+    "version": "FX50 KART",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ZANELLA",
+    "modelo": "Z",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "Z TRUCK",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ZANELLA",
+    "modelo": "Z",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "Z TRUCK",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ZANELLA",
+    "modelo": "Z",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "Z TRUCK DUO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ZANELLA",
+    "modelo": "Z",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "Z TRUCK DUO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

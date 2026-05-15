@@ -1,0 +1,189 @@
+[
+  {
+    "marca": "HAVAL",
+    "modelo": "H1",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "H1 COMFORT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H1",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "H1 ELITE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H1",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "H1 LUXURY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H2",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "H2 COMFORT 1.5T",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H2",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "H2 LUXURY 1.5T A/T",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "H6 2.0",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2022",
+    "anio_hasta": "2026/0Km",
+    "version": "H6 2WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2022",
+    "anio_hasta": "2026/0Km",
+    "version": "H6 4WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "H6 DIGNITY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2018",
+    "anio_hasta": "2022",
+    "version": "H6 DIGNITY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "H6 GT 4WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "H6 HEV DELUXE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "H6",
+    "anio_desde": "2026/0Km",
+    "anio_hasta": "2026/0Km",
+    "version": "H6 HEV SUPREME",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "JOLION",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "JOLION 1.5T 7DCT DELUXE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "JOLION",
+    "anio_desde": "2023",
+    "anio_hasta": "2026/0Km",
+    "version": "JOLION 1.5T 7DCT SUPREMERURAL",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "JOLION",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "JOLION PRO HEV DELUXE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "HAVAL",
+    "modelo": "JOLION",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "JOLION PRO HEV SUPREME",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

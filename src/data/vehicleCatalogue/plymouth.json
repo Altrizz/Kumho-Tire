@@ -1,0 +1,90 @@
+[
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "GRAND",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "GRAND VOYAGER",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "GRAND",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "GRAND VOYAGER LE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "GRAND",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "GRAND VOYAGER SE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "VOYAGER",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "VOYAGER",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "VOYAGER",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "VOYAGER",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "VOYAGER",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "VOYAGER ASKL52",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "VOYAGER",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "VOYAGER LE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PLYMOUTH",
+    "modelo": "VOYAGER",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "VOYAGER SE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

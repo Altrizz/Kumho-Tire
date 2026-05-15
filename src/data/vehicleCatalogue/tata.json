@@ -1,0 +1,101 @@
+[
+  {
+    "marca": "TATA",
+    "modelo": "207",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "207",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "SAFARI",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SAFARI",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "SAFARI",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SAFARI EX 4X4",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCO",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCO SPORT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCOLINE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCOLINE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCOLINE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCOLINE (DOBLE CABINA)",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCOLINE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCOLINE TDI (CABINA DO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCOLINE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCOLINE TDI 4X4 (CABINA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "TATA",
+    "modelo": "TELCOLINE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TELCOLINE TDI 4X4-CABINA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

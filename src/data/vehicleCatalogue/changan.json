@@ -1,0 +1,112 @@
+[
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS15",
+    "anio_desde": "2018",
+    "anio_hasta": "2020",
+    "version": "CS15",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS15",
+    "anio_desde": "2019",
+    "anio_hasta": "2020",
+    "version": "CS15 COMFORT DCT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS15",
+    "anio_desde": "2018",
+    "anio_hasta": "2020",
+    "version": "CS15 COMFORT MT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS15",
+    "anio_desde": "2018",
+    "anio_hasta": "2020",
+    "version": "CS15 LUXURY DCT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS75",
+    "anio_desde": "2019",
+    "anio_hasta": "2020",
+    "version": "CS75 ELITE AT 2WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "CS75",
+    "anio_desde": "2019",
+    "anio_hasta": "2020",
+    "version": "CS75 LUXURY AT 4WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "M201",
+    "anio_desde": "2019",
+    "anio_hasta": "2026/0Km",
+    "version": "M201 CARGO VAN",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "MD201",
+    "anio_desde": "2019",
+    "anio_hasta": "2026/0Km",
+    "version": "MD201",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "MD201",
+    "anio_desde": "2019",
+    "anio_hasta": "2026/0Km",
+    "version": "MD201 BOX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CHANGAN",
+    "modelo": "MD201",
+    "anio_desde": "2021",
+    "anio_hasta": "2026/0Km",
+    "version": "MD201 BOX REFRIGERADA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "marca": "GAZ",
+    "modelo": "2705-24",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "2705-24",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAZ",
+    "modelo": "2705-44",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "2705-44",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAZ",
+    "modelo": "2752",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "2752",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAZ",
+    "modelo": "3302",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "3302",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAZ",
+    "modelo": "3302",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "3302 D",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GAZ",
+    "modelo": "33023",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "33023",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

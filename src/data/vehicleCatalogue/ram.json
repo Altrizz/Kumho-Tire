@@ -1,0 +1,101 @@
+[
+  {
+    "marca": "RAM",
+    "modelo": "RAM",
+    "anio_desde": "2013",
+    "anio_hasta": "2026/0Km",
+    "version": "RAM 1500 5.7 V8 LARAMIE 4PICK-UP",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAM",
+    "anio_desde": "2023",
+    "anio_hasta": "2026/0Km",
+    "version": "RAM 1500 5.7L V8 REBEL 4X",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAM",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "RAM 1500 LARAMIE 3.0L SO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAM",
+    "anio_desde": "2013",
+    "anio_hasta": "2026/0Km",
+    "version": "RAM 1500 SLT LARAMIE 5.7",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAM",
+    "anio_desde": "2014",
+    "anio_hasta": "2026/0Km",
+    "version": "RAM 2500 6.7L LARAMIE 4X",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAMPAGE",
+    "anio_desde": "2026/0Km",
+    "anio_hasta": "2026/0Km",
+    "version": "RAMPAGE BIG HORN 2.2TD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAMPAGE",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "RAMPAGE LARAMIE 2.0L GMPICK-UP",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAMPAGE",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "RAMPAGE R/T 2.0L GME AT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RAM",
+    "modelo": "RAMPAGE",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "RAMPAGE REBEL 2.0L GME",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

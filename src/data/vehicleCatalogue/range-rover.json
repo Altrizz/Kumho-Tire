@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "RANGE ROVER",
+    "modelo": "VOGUE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "VOGUE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "RANGE ROVER",
+    "modelo": "VOGUE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "VOGUE SE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

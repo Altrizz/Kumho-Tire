@@ -1,0 +1,13 @@
+[
+  {
+    "marca": "HUMMER",
+    "modelo": "H2",
+    "anio_desde": "2002",
+    "anio_hasta": "2007",
+    "version": "H2",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

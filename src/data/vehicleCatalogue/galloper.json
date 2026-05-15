@@ -1,0 +1,134 @@
+[
+  {
+    "marca": "GALLOPER",
+    "modelo": "DSL",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "DSL EXCEED",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "EXCEED",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "EXCEED",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "EXCEED",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "EXCEED GSL (LWB) 3.0 V6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "EXCEED",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "EXCEED INTERCOOLER TURBTODO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "EXCEED",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "EXCEED INTERCOOLER TURBTODO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "EXCEED",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "EXCEED INTERCOOLER TURBTODO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "SANTAMO",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SANTAMO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "SANTAMO",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SANTAMO",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "SANTAMO",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "SANTAMO AWD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "TURBO",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TURBO WAGON",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "XL",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "XL TURBO WAGON",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "GALLOPER",
+    "modelo": "XL",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "XL V6 WAGON",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

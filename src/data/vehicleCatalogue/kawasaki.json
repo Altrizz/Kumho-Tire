@@ -1,0 +1,90 @@
+[
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2009",
+    "anio_hasta": "2011",
+    "version": "TERYX 4X4",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "TERYX 4X4 NRA OUTDOORS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "TERYX 750 FI 4X4",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "TERYX 750 FI 4X4 LE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2009",
+    "anio_hasta": "2011",
+    "version": "TERYX 750 FI SPORT 4X4",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX",
+    "anio_desde": "2021",
+    "anio_hasta": "2026/0Km",
+    "version": "TERYX KRX 1000",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX4",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "TERYX4 750 4X4 EPS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "KAWASAKI",
+    "modelo": "TERYX4",
+    "anio_desde": "2011",
+    "anio_hasta": "2013",
+    "version": "TERYX4 750 4X4 EPS LE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

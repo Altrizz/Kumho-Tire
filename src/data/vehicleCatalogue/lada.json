@@ -1,0 +1,222 @@
+[
+  {
+    "marca": "LADA",
+    "modelo": "2107",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "2107",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "AFALINA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "AFALINA 21100 1.5",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "AFALINA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "AFALINA 21102 1.5 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "AFALINA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "AFALINA 21103 1.5 I 16V",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "AFALINA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "AFALINA 21110 1.5 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "LAIKA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "LAIKA 21043",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "LAIKA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "LAIKA 21043 1.6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "LAIKA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "LAIKA 21053",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "LAIKA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "LAIKA 21053 1.5",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "LAIKA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "LAIKA 21053 1.6",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "NIVA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "NIVA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "NIVA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "NIVA 2121",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "NIVA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "NIVA 21213 1.7",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "NIVA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "NIVA 21214 1.7 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "NIVA",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "NIVA 21217",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "SAMARA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SAMARA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "SAMARA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SAMARA 21083 1.5I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "SAMARA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SAMARA 21093 1.5 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "SAMARA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SAMARA 21093 1.5 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "LADA",
+    "modelo": "SAMARA",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "SAMARA 21099 1.5 I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

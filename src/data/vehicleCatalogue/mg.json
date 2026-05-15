@@ -1,0 +1,79 @@
+[
+  {
+    "marca": "MG",
+    "modelo": "MG3",
+    "anio_desde": "2026/0Km",
+    "anio_hasta": "2026/0Km",
+    "version": "MG3 HYBRID+",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "MGF",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "MGF",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "MGF",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "MGF",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "MGF",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "MGF 1.8I",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "MGF",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "MGF 1.8I VVC",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "MIDGET",
+    "anio_desde": "2002",
+    "anio_hasta": "2002",
+    "version": "MIDGET TD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MG",
+    "modelo": "ZS",
+    "anio_desde": "2026/0Km",
+    "anio_hasta": "2026/0Km",
+    "version": "ZS HYBRID+",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "ARCTIC CAT",
+    "modelo": "WILDCAT",
+    "anio_desde": "2009",
+    "anio_hasta": "2013",
+    "version": "WILDCAT TRAIL XT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "ARCTIC CAT",
+    "modelo": "WILDCAT",
+    "anio_desde": "2014",
+    "anio_hasta": "2016",
+    "version": "WILDCAT X",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

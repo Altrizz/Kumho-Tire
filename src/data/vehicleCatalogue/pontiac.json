@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "PONTIAC",
+    "modelo": "GRAND",
+    "anio_desde": "2002",
+    "anio_hasta": "2009",
+    "version": "GRAND PRIX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "PONTIAC",
+    "modelo": "SOLSTICE",
+    "anio_desde": "2006",
+    "anio_hasta": "2010",
+    "version": "SOLSTICE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "marca": "DAIHATSU",
+    "modelo": "DELTA",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "DELTA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "GRAND",
+    "anio_desde": "2002",
+    "anio_hasta": "2005",
+    "version": "GRAND MOVE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "MIRA",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "MIRA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "MIRA",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "MIRA",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "MOVE",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "MOVE",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "ROCKY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "ROCKY",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "ROCKY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "ROCKY D",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "ROCKY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "ROCKY SE 4WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "ROCKY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "ROCKY SE 4WD",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "ROCKY",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "ROCKY WAGON F78",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "SIRION",
+    "anio_desde": "2002",
+    "anio_hasta": "2005",
+    "version": "SIRION",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "TERIOS",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TERIOS",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "TERIOS",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TERIOS DX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DAIHATSU",
+    "modelo": "TERIOS",
+    "anio_desde": "2002",
+    "anio_hasta": "2003",
+    "version": "TERIOS SX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

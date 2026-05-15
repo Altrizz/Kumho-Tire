@@ -1,0 +1,68 @@
+[
+  {
+    "marca": "CFMOTO",
+    "modelo": "UFORCE",
+    "anio_desde": "2019",
+    "anio_hasta": "2026/0Km",
+    "version": "UFORCE 1000",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CFMOTO",
+    "modelo": "UFORCE",
+    "anio_desde": "2018",
+    "anio_hasta": "2019",
+    "version": "UFORCE 550",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CFMOTO",
+    "modelo": "UFORCE",
+    "anio_desde": "2021",
+    "anio_hasta": "2026/0Km",
+    "version": "UFORCE 600",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CFMOTO",
+    "modelo": "ZFORCE",
+    "anio_desde": "2017",
+    "anio_hasta": "2026/0Km",
+    "version": "ZFORCE 1000",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CFMOTO",
+    "modelo": "ZFORCE",
+    "anio_desde": "2017",
+    "anio_hasta": "2026/0Km",
+    "version": "ZFORCE 1000 EX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "CFMOTO",
+    "modelo": "ZFORCE",
+    "anio_desde": "2015",
+    "anio_hasta": "2026/0Km",
+    "version": "ZFORCE 800 EX",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

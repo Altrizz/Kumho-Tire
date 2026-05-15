@@ -1,0 +1,90 @@
+[
+  {
+    "marca": "DFSK",
+    "modelo": "C31",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "C31",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "C32",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "C32",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "C35",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "C35",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "EC35",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "EC35",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "GLORY",
+    "anio_desde": "2025",
+    "anio_hasta": "2026/0Km",
+    "version": "GLORY 500",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "GLORY",
+    "anio_desde": "2024",
+    "anio_hasta": "2026/0Km",
+    "version": "GLORY 580",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "K01H",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "K01H",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "DFSK",
+    "modelo": "K01H",
+    "anio_desde": "2018",
+    "anio_hasta": "2026/0Km",
+    "version": "K01H",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

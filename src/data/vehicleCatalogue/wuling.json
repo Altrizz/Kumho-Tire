@@ -1,0 +1,35 @@
+[
+  {
+    "marca": "WULING",
+    "modelo": "LZW1010PL",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "LZW1010PL",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "WULING",
+    "modelo": "LZW1010VHW",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "LZW1010VHW",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "WULING",
+    "modelo": "LZW6320H",
+    "anio_desde": "2002",
+    "anio_hasta": "2004",
+    "version": "LZW6320H",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]

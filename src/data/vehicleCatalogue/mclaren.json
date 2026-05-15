@@ -1,0 +1,24 @@
+[
+  {
+    "marca": "MCLAREN",
+    "modelo": "570S",
+    "anio_desde": "2020",
+    "anio_hasta": "2021",
+    "version": "570S",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  },
+  {
+    "marca": "MCLAREN",
+    "modelo": "600",
+    "anio_desde": "2020",
+    "anio_hasta": "2021",
+    "version": "600 LT",
+    "medida": null,
+    "estado": "Pendiente fitment",
+    "rodado": null,
+    "posicion": "Delantera/Trasera"
+  }
+]
